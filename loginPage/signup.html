@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin to EduSphere</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="signup-center">
+        <div class="signup-box">
+            <h2>Create an Account</h2>
+            <form>
+                <label>First Name *</label>
+                <input type="text" placeholder="Enter your first name" required>
+                <label>Last Name *</label>
+                <input type="text" placeholder="Enter your last name" required>
+                <label>Email *</label>
+                <input type="email" placeholder="name@example.com" required>
+                <label>Password *</label>
+                <p class="pass-ent">Between 8 and 72 characters</p>
+                <input type="password" id="password" placeholder="Create a password" required>
+                <label>Confirm Password *</label>
+                <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                <span id="password-error" style="color:red; display:none; font-size: 10px;">Passwords must be the same</span>
+                <script>
+                    const password = document.getElementById('password');
+                    const confirmPassword = document.getElementById('confirm-password');
+                    const error = document.getElementById('password-error');
+                    function checkPasswords() {
+                        if (password.value !== confirmPassword.value) {
+                            error.style.display = 'inline';
+                        } else {
+                            error.style.display = 'none';
+                        }
+                    }
+                    password.addEventListener('input', checkPasswords);
+                    confirmPassword.addEventListener('input', checkPasswords);
+                </script>
+                <button type="submit">Sign Up</button>
+                <div class="divider">
+        <span class="divider-line"></span>
+        <span class="divider-text">OR</span>
+        <span class="divider-line"></span>
+        </div>
+        <button type="button" class="social-btn google-btn" disabled>
+  <div class="google-img"><img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+      alt="Google logo"
+      style="height: 20px; vertical-align: middle;">
+      </div>
+  <div class="google">Continue with Google</div>
+</button>
+
+      <button type="button" class="social-btn facebook-btn">
+  <div class="facebook-img"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
+      alt="Facebook logo"
+      style="height: 20px; vertical-align: middle;"></div>
+      <div class="Facebook">Continue with Facebook</div>
+</button>
+  <button type="button" class="social-btn apple-btn">
+  <div class="apple-img"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+      alt="Apple logo"
+      style="height: 20px; vertical-align: middle;"></div>
+  <div class="Apple">Continue with Apple</div>
+  </button>
+      <p class="register-link">Already have an account? <a href="loginpage.html">Login</a></p>
+                </form>
+    </div>
+</body>
+</html>
