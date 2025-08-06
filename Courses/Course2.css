@@ -1,0 +1,26 @@
+/* Style for the entire page */
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f4f7fa;
+    color: #1c1c1c;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main wrapper for all content */
+.container {
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Title section at the top */
+.title {
+    border-bottom: grey solid 1px;
+}
+
+/* General content text blocks */
+.content {
+    font-size: 25px;
+    text-align: justify;
+}
