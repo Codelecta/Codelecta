@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback</title>
+    <link rel="stylesheet" href="feedback.css" />
+</head>
+
+<body>
+    <div id="container">
+        <h1>Share Your Feedback</h1>
+        <p>We'd love to hear your thoughts, suggestions, or any issues you've encountered.</p>
+        <form id="form">
+            <div>
+                <label for="name">Name:</label>
+                <input class="form-input" type="text" id="name" name="name" placeholder="Your Name" required/>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="Your Email" required/>
+            </div>
+            <div>
+                <label for="category">Feedback Category</label>
+                <select class="form-input" id="category" name="category" required>
+                    <option value="">Please select a category</option>
+                    <option value="general">General Feedback</option>
+                    <option value="bug">Bug Report</option>
+                    <option value="feature">Feature Request</option>
+                    <option value="usability">Website Usability</option>
+                    <option value="content">Content Suggestions</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="feedback">Feedback:</label>
+                <textarea class="form-input" id="feedback" name="feedback" rows="4" placeholder="Your Feedback" required></textarea>
+            </div>
+            <div>
+                <button class="form-button" type="submit">Submit Feedback</button>
+            </div>
+        </form>
+        </div>
+</body>
+
+</html>
