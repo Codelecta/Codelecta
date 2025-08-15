@@ -14,21 +14,23 @@ body {
 }
 
 #container {
+  margin-top: 15px;
   max-width: 500px;
   background-color: #202020;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 85vh;
+  height: 90vh;
 }
 
-h1 {
+#container h1 {
+  margin-top: 15px;
   color: #fff;
   text-align: center;
   margin-bottom: 20px;
 }
 
-p {
+#container p {
   color: #fff;
   text-align: center;
   margin-bottom: 20px;
