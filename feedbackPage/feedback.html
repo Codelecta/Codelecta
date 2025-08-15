@@ -1,47 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feedback</title>
     <link rel="stylesheet" href="feedback.css" />
-</head>
+  </head>
+  <body>
+    <nav>
+      <a id="logo-container" href="main.html">
+        <img src="Logo.png" alt="Logo" class="logo" />
+      </a>
+      <div class="left-nav" id="nav-links">
+        <div class="option">Home</div>
+        <span class="divider"></span>
+        <div class="option">About Us</div>
+        <span class="divider"></span>
+        <div class="option">Services</div>
+        <span class="divider"></span>
+        <div class="option">Contact</div>
+        <span class="divider"></span>
+        <div class="option">Feedback</div>
+      </div>
 
-<body>
+      <div class="right-nav" id="nav-buttons">
+        <button class="login">Login</button>
+        <button class="sign-up">Sign Up</button>
+      </div>
+    </nav>
+    <section>
     <div id="container">
-        <h1>Share Your Feedback</h1>
-        <p>We'd love to hear your thoughts, suggestions, or any issues you've encountered.</p>
-        <form id="form">
-            <div>
-                <label for="name">Name:</label>
-                <input class="form-input" type="text" id="name" name="name" placeholder="Your Name" required/>
-            </div>
-            <div>
-                <label for="email">Email:</label>
-                <input class="form-input" type="email" id="email" name="email" placeholder="Your Email" required/>
-            </div>
-            <div>
-                <label for="category">Feedback Category</label>
-                <select class="form-input" id="category" name="category" required>
-                    <option value="">Please select a category</option>
-                    <option value="general">General Feedback</option>
-                    <option value="bug">Bug Report</option>
-                    <option value="feature">Feature Request</option>
-                    <option value="usability">Website Usability</option>
-                    <option value="content">Content Suggestions</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div>
-                <label for="feedback">Feedback:</label>
-                <textarea class="form-input" id="feedback" name="feedback" rows="4" placeholder="Your Feedback" required></textarea>
-            </div>
-            <div>
-                <button class="form-button" type="submit">Submit Feedback</button>
-            </div>
-        </form>
+      <h1>Share Your Feedback</h1>
+      <p>
+        We'd love to hear your thoughts, suggestions, or any issues you've
+        encountered.
+      </p>
+      <form id="form">
+        <div>
+          <label for="name">Name:</label>
+          <input
+            class="form-input"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+            required
+          />
         </div>
-</body>
-
+        <div>
+          <label for="email">Email:</label>
+          <input
+            class="form-input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your Email"
+            required
+          />
+        </div>
+        <div>
+          <label for="category">Feedback Category</label>
+          <select class="form-input" id="category" name="category" required>
+            <option value="">Please select a category</option>
+            <option value="general">General Feedback</option>
+            <option value="bug">Bug Report</option>
+            <option value="feature">Feature Request</option>
+            <option value="usability">Website Usability</option>
+            <option value="content">Content Suggestions</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="feedback">Feedback:</label>
+          <textarea
+            class="form-input"
+            id="feedback"
+            name="feedback"
+            rows="4"
+            placeholder="Your Feedback"
+            required
+          ></textarea>
+        </div>
+        <div>
+          <button class="form-button" type="submit">Submit Feedback</button>
+        </div>
+      </form>
+    </div>
+    </section>
+  </body>
 </html>

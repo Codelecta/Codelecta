@@ -6,11 +6,110 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #000000 0%, #252525 100%);
   min-height: 100vh;
-  padding: 20px;
-    display: flex;
-    justify-content: center;
+
+}
+
+nav {
+  display: flex;
+  background: linear-gradient(to right, #000000, #3b0066, #5b009c);
+  padding: 15px 30px;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 100px;
+}
+
+#logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  padding: 10px;
+  margin-left: 20px;
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+}
+
+h1 {
+  font-family: "Arial", sans-serif;
+  font-size: 30px;
+  color: #ffffff;
+  margin-left: 10px;
+  align-items: center;
+  text-shadow: #ffffff 1px 1px 2px;
+}
+
+#logo-container:hover {
+  cursor: pointer;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-size: 18px;
+  margin-left: 16rem;
+  margin-right: auto;
+  flex-wrap: wrap;
+  font-weight: 500;
+}
+
+.option {
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.option:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #d3d3d3;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.divider {
+  display: inline-block;
+  height: 30px;
+  width: 1px;
+  background-color: #8d8d8d;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login,
+.sign-up {
+  background: linear-gradient(to right, #6a0dad, #8a2be2);
+  color: #ffffff;
+  padding: 10px 25px;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login:hover,
+.sign-up:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px #8a2be2(0, 180, 219, 0.4);
+  cursor: pointer;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    background: linear-gradient(135deg, #000000 0%, #252525 100%);
 }
 
 #container {
