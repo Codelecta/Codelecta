@@ -1,11 +1,15 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-    background-color: #75cae6;
-    font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a 90%);
+  display: flex;
+  flex-direction: column;
 }
 
 /* Navbar */
@@ -13,7 +17,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(120deg, #4b0082, #1f1f1f, #4b0082);
+  background: linear-gradient(90deg, #4b0082, #2e004f);
   padding: 20px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   height: 85px;
@@ -37,156 +41,165 @@ nav {
   object-fit: contain;
 }
 
+/* Login form container */
 .login-center {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;  
-  margin: 0;
-  padding: 20px;
-  box-sizing: border-box;
+  padding: 40px 20px;
 }
 
 .login-box {
   width: 100%;
-  max-width: 400px; 
+  max-width: 400px;
   padding: 2rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background: #1f1f1f;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.6s ease-in-out;
 }
 
 .login-box h2 {
   text-align: center;
   margin-bottom: 1.5rem;
+  font-size: 26px;
+    background: linear-gradient(90deg, #ff0080, #ff6a00, #faff00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 6px rgba(139, 92, 246, 0.5);
 }
 
+/* Inputs */
 .login-box label {
   display: block;
   margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #ddd;
 }
 
 .login-box input {
   width: 100%;
-  padding: 0.8rem;
+  padding: 0.9rem;
   margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.3s ease;
 }
 
+.login-box input:focus {
+  border: 1px solid #8b5cf6;
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.6);
+  outline: none;
+}
+
+/* Main login button */
 .login-box button {
   width: 100%;
-  padding: 0.8rem;
-  color: rgb(0, 0, 0);
+  padding: 0.9rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #8b5cf6, #9333ea);
+  color: white;
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .login-box button:hover {
-  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(139, 92, 246, 0.5);
 }
 
+/* Forgot password */
 .forgot-password {
-    text-align: center;
-    margin-top: 1rem;
+  text-align: center;
+  margin: 1rem 0;
 }
-
-
 .forgot-password a {
-  color: #666;
+  color: #aaa;
   text-decoration: none;
   font-size: 0.9rem;
 }
-
 .forgot-password a:hover {
   text-decoration: underline;
+  color: #8b5cf6;
 }
 
-
+/* Divider */
 .divider {
   display: flex;
   align-items: center;
   margin: 1.5rem 0;
 }
-
 .divider-line {
   flex: 1;
   height: 1px;
-  background: #ddd;
+  background: #333;
 }
-
 .divider-text {
   padding: 0 1rem;
-  color: #777;
-  font-size: 0.9rem;
+  color: #888;
+  font-size: 0.85rem;
 }
 
-
+/* Social buttons */
 .social-btn {
   width: 100%;
-  padding: 0.8rem;
+  padding: 0.9rem;
   margin-bottom: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background: #f3f2f0;
+  border: none;
+  border-radius: 8px;
+  background: #2a2a2a;
+  color: #fff;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
+
 .social-btn img {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
+
 .social-btn:hover {
-  background: #f0f0f0;
+  background: #3a3a3a;
+  transform: translateY(-2px);
 }
 
-.google {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
-}
-
-.Facebook {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
-}
-
-.Apple {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
-}
-
-.google-img {
-  transform: translateX(-220%);
-}
-.facebook-img {
-  transform: translateX(-190%);
-}
-.apple-img {
-  transform: translateX(-236%);
-}
-
+/* Register link */
 .register-link {
+    color: #888;
   text-align: center;
   margin-top: 1rem;
 }
 .register-link a {
-  color: #666;
+  color: #8b5cf6;
   text-decoration: none;
   font-size: 0.9rem;
+  font-weight: 600;
 }
 .register-link a:hover {
   text-decoration: underline;
 }
 
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
