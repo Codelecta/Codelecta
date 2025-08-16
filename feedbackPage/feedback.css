@@ -62,6 +62,7 @@ section {
   font-size: 28px;
   text-align: center;
   background: linear-gradient(90deg, #ff0080, #ff6a00, #faff00);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
