@@ -8,6 +8,35 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #4b0082, #1f1f1f, #4b0082);
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  height: 85px;
+}
+
+#logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+#logo-container:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.logo {
+  width: 90px;
+  height: auto;
+  object-fit: contain;
+}
+
 .login-center {
   display: flex;
   justify-content: center;
