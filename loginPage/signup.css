@@ -52,7 +52,7 @@ nav {
 
 .signup-box {
   width: 100%;
-  max-width: 420px; 
+  max-width: 420px;
   padding: 2rem;
   background: #1f1f1f;
   border-radius: 12px;
@@ -64,7 +64,7 @@ nav {
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 26px;
-      background: linear-gradient(90deg, #ff0080, #ff6a00, #faff00);
+  background: linear-gradient(90deg, #ff0080, #ff6a00, #faff00);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -167,13 +167,41 @@ nav {
 }
 
 .social-btn:hover {
-  background: #3a3a3a;
+  cursor: not-allowed;
   transform: translateY(-2px);
 }
 
+.google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+.Facebook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+.Apple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+.google-img {
+  transform: translateX(-220%);
+}
+.facebook-img {
+  transform: translateX(-190%);
+}
+.apple-img {
+  transform: translateX(-236%);
+}
+
 /* Register / Login link */
-.register-link { 
-    color: #888;
+.register-link {
+  color: #888;
   text-align: center;
   margin-top: 1rem;
 }
