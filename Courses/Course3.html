@@ -29,8 +29,8 @@
             <h3>First React Component</h3>
             <p>
                 Here is a simple React component that displays a greeting message. Try editing the code to customize
-                the message or add your own elements. React uses JSX syntax which looks like HTML but is actually
-                JavaScript.
+                the message or add your own elements. This example uses React.createElement() which is the core way 
+                React builds elements.
             </p>
         </div>
 
@@ -44,19 +44,20 @@
             <textarea id="react-code" spellcheck="false" aria-label="React JSX code editor">function Welcome() {
   const name = "React Developer";
   
-  return (
-    <div style={{padding: '20px', backgroundColor: '#f0f8ff', borderRadius: '8px'}}>
-      <h2>Hello, {name}! 👋</h2>
-      <p>Welcome to React programming!</p>
-      <button onClick={() => alert('Button clicked!')}>
-        Click me!
-      </button>
-    </div>
-  );
+  return React.createElement('div', {
+    style: {padding: '20px', backgroundColor: '#f0f8ff', borderRadius: '8px'}
+  }, [
+    React.createElement('h2', {key: 'title'}, 'Hello, ' + name + '! 👋'),
+    React.createElement('p', {key: 'desc'}, 'Welcome to React programming!'),
+    React.createElement('button', {
+      key: 'btn',
+      onClick: function() { alert('Button clicked!'); }
+    }, 'Click me!')
+  ]);
 }
 
 // Render the component
-ReactDOM.render(<Welcome />, document.getElementById('output'));</textarea>
+ReactDOM.render(React.createElement(Welcome), document.getElementById('output'));</textarea>
 
             <div class="controls">
                 <button id="run-btn" disabled>Run ▶</button>
@@ -82,10 +83,9 @@ ReactDOM.render(<Welcome />, document.getElementById('output'));</textarea>
         </div>
     </div>
 
-    <!-- React and Babel CDN -->
+    <!-- React CDN -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <script>
         let isReactReady = false;
@@ -100,7 +100,7 @@ ReactDOM.render(<Welcome />, document.getElementById('output'));</textarea>
                 await new Promise(resolve => setTimeout(resolve, 500));
                 
                 // Check if React is available
-                if (typeof React !== 'undefined' && typeof ReactDOM !== 'undefined' && typeof Babel !== 'undefined') {
+                if (typeof React !== 'undefined' && typeof ReactDOM !== 'undefined') {
                     isReactReady = true;
                     status.textContent = 'Ready';
                     document.getElementById('run-btn').disabled = false;
@@ -129,16 +129,11 @@ ReactDOM.render(<Welcome />, document.getElementById('output'));</textarea>
                 // Create a container for the React component
                 output.innerHTML = '<div id="output" style="padding: 10px;"></div>';
                 
-                // Transform JSX to JavaScript using Babel
-                const transformedCode = Babel.transform(code, {
-                    presets: ['react']
-                }).code;
-
-                // Execute the transformed code
-                eval(transformedCode);
+                // Execute the React code directly
+                eval(code);
                 
             } catch (err) {
-                output.innerHTML = `<div style="color: #ef4444; padding: 10px; font-family: monospace; white-space: pre-wrap;">Error:\n${err.message}</div>`;
+                output.innerHTML = '<div style="color: #ef4444; padding: 10px; font-family: monospace; white-space: pre-wrap;">Error:\\n' + err.message + '</div>';
             }
         }
 
