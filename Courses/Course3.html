@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to React</title>
+    <link rel="stylesheet" href="Course3.css" />
+</head>
+
+<body>
+    <!-- Main container for all page content -->
+    <div class="container">
+
+        <!-- Page title section -->
+        <div class="title">
+            <h1>Introduction to React</h1>
+        </div>
+
+        <div class="content">
+            <p>
+                React is a powerful JavaScript library for building user interfaces. Created by Facebook, it uses a
+                component-based architecture and virtual DOM for efficient rendering. React's declarative approach
+                makes it easy to create interactive UIs and manage application state.
+            </p>
+        </div>
+
+        <div class="content">
+            <h3>First React Component</h3>
+            <p>
+                Here is a simple React component that displays a greeting message. Try editing the code to customize
+                the message or add your own elements. React uses JSX syntax which looks like HTML but is actually
+                JavaScript.
+            </p>
+        </div>
+
+        <!-- React compiler section -->
+        <section class="compiler">
+            <div class="compiler-header">
+                <h2>Try React in your browser</h2>
+                <span id="react-status" class="status">Loading React…</span>
+            </div>
+
+            <textarea id="react-code" spellcheck="false" aria-label="React JSX code editor">function Welcome() {
+  const name = "React Developer";
+  
+  return (
+    <div style={{padding: '20px', backgroundColor: '#f0f8ff', borderRadius: '8px'}}>
+      <h2>Hello, {name}! 👋</h2>
+      <p>Welcome to React programming!</p>
+      <button onClick={() => alert('Button clicked!')}>
+        Click me!
+      </button>
+    </div>
+  );
+}
+
+// Render the component
+ReactDOM.render(<Welcome />, document.getElementById('output'));</textarea>
+
+            <div class="controls">
+                <button id="run-btn" disabled>Run ▶</button>
+                <button id="clear-btn">Clear Output</button>
+            </div>
+
+            <div class="console">
+                <div class="console-header">Output</div>
+                <div id="react-output">Waiting…</div>
+            </div>
+        </section>
+
+        <div class="content">
+            <h3>Why Learn React?</h3>
+            <ul>
+                <li>Component-based architecture makes code reusable and maintainable.</li>
+                <li>Virtual DOM provides excellent performance for dynamic applications.</li>
+                <li>Huge ecosystem with libraries like React Router, Redux, and Material-UI.</li>
+                <li>Backed by Meta (Facebook) and used by major companies like Netflix, Airbnb, and Instagram.</li>
+                <li>High demand for React developers in web development and mobile (React Native) jobs.</li>
+                <li>Great developer tools and debugging support.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- React and Babel CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script>
+        let isReactReady = false;
+
+        // Initialize React environment
+        (async () => {
+            const status = document.getElementById('react-status');
+            try {
+                status.textContent = 'Setting up environment…';
+                
+                // Wait a moment for libraries to load
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+                // Check if React is available
+                if (typeof React !== 'undefined' && typeof ReactDOM !== 'undefined' && typeof Babel !== 'undefined') {
+                    isReactReady = true;
+                    status.textContent = 'Ready';
+                    document.getElementById('run-btn').disabled = false;
+                } else {
+                    throw new Error('Failed to load React libraries');
+                }
+            } catch (e) {
+                status.textContent = 'Failed to load';
+                console.error(e);
+            }
+        })();
+
+        // Helper: run React code and render output
+        async function runReact() {
+            const output = document.getElementById('react-output');
+            const code = document.getElementById('react-code').value;
+
+            if (!isReactReady) {
+                output.innerHTML = '<div style="color: #ef4444; padding: 10px;">React runtime not ready yet.</div>';
+                return;
+            }
+
+            output.innerHTML = '<div style="padding: 10px; color: #6b7280;">Running…</div>';
+
+            try {
+                // Create a container for the React component
+                output.innerHTML = '<div id="output" style="padding: 10px;"></div>';
+                
+                // Transform JSX to JavaScript using Babel
+                const transformedCode = Babel.transform(code, {
+                    presets: ['react']
+                }).code;
+
+                // Execute the transformed code
+                eval(transformedCode);
+                
+            } catch (err) {
+                output.innerHTML = `<div style="color: #ef4444; padding: 10px; font-family: monospace; white-space: pre-wrap;">Error:\n${err.message}</div>`;
+            }
+        }
+
+        // Wire up buttons
+        document.getElementById('run-btn').addEventListener('click', runReact);
+        document.getElementById('clear-btn').addEventListener('click', () => {
+            document.getElementById('react-output').innerHTML = '';
+        });
+    </script>
+</body>
+
+</html>
