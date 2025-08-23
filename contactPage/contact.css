@@ -45,7 +45,7 @@ h1::after {
 /* Card style (same for form + map) */
 .form-container {
   flex: 1;
-  min-width: 320px;
+  min-height: 50vh;
   background: #1f1f1f;
   padding: 30px;
   border-radius: 14px;
@@ -70,8 +70,19 @@ h1::after {
 
 /* Inputs */
 input,
-select,
 textarea {
+  width: 95%;
+  padding: 14px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 15px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+select {
   width: 100%;
   padding: 14px;
   border: 1px solid #333;
@@ -117,6 +128,7 @@ textarea {
 
 .map-container {
   flex: 1;
+  min-height: 50vh;
   background: #1f1f1f;
   padding: 30px;
   border-radius: 14px;
