@@ -1,287 +1,296 @@
-/* Style for the entire page */
-body {
-    font-family: "Segoe UI", sans-serif;
-    min-height: 100vh;
-    color: #1c1c1c;
-    margin: 0;
-    padding: 0;
-}
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #e2e8f0;
+            margin: 0;
+            padding: 0;
+        }
 
-/* Main wrapper for all content */
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
+        /* Main wrapper for all content */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
 
-/* Title section at the top */
-.title {
-    text-align: center;
-    margin-bottom: 50px;
-    color: white;
-}
+        /* Title section at the top */
+        .title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #f8fafc;
+        }
 
-.title h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
+        .title h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(135deg, #60a5fa, #a78bfa, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-.subtitle {
-    font-size: 20px;
-    opacity: 0.9;
-    font-weight: 300;
-}
+        .subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
 
-/* ===============================
-   Courses Grid
-   =============================== */
+        /* ===============================
+           Courses Grid
+           =============================== */
 
-.courses-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    margin-bottom: 60px;
-}
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
 
-/* Individual course cards */
-.course-card {
-    background: white;
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
+        /* Individual course cards */
+        .course-card {
+            background: linear-gradient(145deg, #2d3748, #1a202c);
+            border: 1px solid #4a5568;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-.course-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: #60a5fa;
+        }
 
-/* Course icons */
-.course-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    font-weight: bold;
-    color: white;
-}
+        /* Course icons */
+        .course-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+        }
 
-.course-card h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
+        .course-card h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #f7fafc;
+        }
 
-.course-description {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 20px;
-}
+        .course-description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #cbd5e0;
+            margin-bottom: 20px;
+        }
 
-/* Course features tags */
-.course-features {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
-}
+        /* Course features tags */
+        .course-features {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
 
-.feature {
-    background: #f1f5f9;
-    color: #475569;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-}
+        .feature {
+            background: #4a5568;
+            color: #e2e8f0;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            border: 1px solid #718096;
+        }
 
-/* Course buttons */
-.course-button {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    color: white;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-    border: none;
-    cursor: pointer;
-}
+        /* Course buttons */
+        .course-button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            color: white;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
 
-.course-button:hover {
-    transform: translateY(-2px);
-}
+        .course-button:hover {
+            transform: translateY(-2px);
+        }
 
-/* ===============================
-   Language-specific styling
-   =============================== */
+        /* ===============================
+           Language-specific styling
+           =============================== */
 
-/* HTML - Orange theme */
-.html-card .course-icon {
-    background: linear-gradient(135deg, #f97316, #ea580c);
-}
+        /* HTML - Orange theme */
+        .html-card .course-icon {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+        }
 
-.html-button {
-    background: linear-gradient(135deg, #f97316, #ea580c);
-}
+        .html-button {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+        }
 
-.html-button:hover {
-    background: linear-gradient(135deg, #ea580c, #dc2626);
-}
+        .html-button:hover {
+            background: linear-gradient(135deg, #ea580c, #dc2626);
+        }
 
-/* Python - Blue theme */
-.python-card .course-icon {
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
-}
+        /* Python - Blue theme */
+        .python-card .course-icon {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        }
 
-.python-button {
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
-}
+        .python-button {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        }
 
-.python-button:hover {
-    background: linear-gradient(135deg, #1d4ed8, #1e40af);
-}
+        .python-button:hover {
+            background: linear-gradient(135deg, #1d4ed8, #1e40af);
+        }
 
-/* React - Cyan theme */
-.react-card .course-icon {
-    background: linear-gradient(135deg, #06b6d4, #0891b2);
-}
+        /* React - Cyan theme */
+        .react-card .course-icon {
+            background: linear-gradient(135deg, #06b6d4, #0891b2);
+        }
 
-.react-button {
-    background: linear-gradient(135deg, #06b6d4, #0891b2);
-}
+        .react-button {
+            background: linear-gradient(135deg, #06b6d4, #0891b2);
+        }
 
-.react-button:hover {
-    background: linear-gradient(135deg, #0891b2, #0e7490);
-}
+        .react-button:hover {
+            background: linear-gradient(135deg, #0891b2, #0e7490);
+        }
 
-/* Java - Orange/Brown theme */
-.java-card .course-icon {
-    background: linear-gradient(135deg, #d97706, #b45309);
-}
+        /* Java - Orange/Brown theme */
+        .java-card .course-icon {
+            background: linear-gradient(135deg, #d97706, #b45309);
+        }
 
-.java-button {
-    background: linear-gradient(135deg, #d97706, #b45309);
-}
+        .java-button {
+            background: linear-gradient(135deg, #d97706, #b45309);
+        }
 
-.java-button:hover {
-    background: linear-gradient(135deg, #b45309, #92400e);
-}
+        .java-button:hover {
+            background: linear-gradient(135deg, #b45309, #92400e);
+        }
 
-/* C - Dark Blue theme */
-.c-card .course-icon {
-    background: linear-gradient(135deg, #1e3a8a, #1e40af);
-}
+        /* C - Dark Blue theme */
+        .c-card .course-icon {
+            background: linear-gradient(135deg, #1e3a8a, #1e40af);
+        }
 
-.c-button {
-    background: linear-gradient(135deg, #1e3a8a, #1e40af);
-}
+        .c-button {
+            background: linear-gradient(135deg, #1e3a8a, #1e40af);
+        }
 
-.c-button:hover {
-    background: linear-gradient(135deg, #1e40af, #1d4ed8);
-}
+        .c-button:hover {
+            background: linear-gradient(135deg, #1e40af, #1d4ed8);
+        }
 
-/* PHP - Purple theme */
-.php-card .course-icon {
-    background: linear-gradient(135deg, #7c3aed, #6d28d9);
-}
+        /* PHP - Purple theme */
+        .php-card .course-icon {
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+        }
 
-.php-button {
-    background: linear-gradient(135deg, #7c3aed, #6d28d9);
-}
+        .php-button {
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+        }
 
-.php-button:hover {
-    background: linear-gradient(135deg, #6d28d9, #5b21b6);
-}
+        .php-button:hover {
+            background: linear-gradient(135deg, #6d28d9, #5b21b6);
+        }
 
-/* ===============================
-   Info Section
-   =============================== */
+        /* ===============================
+           Info Section
+           =============================== */
 
-.info-section {
-    background: white;
-    border-radius: 16px;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+        .info-section {
+            background: linear-gradient(145deg, #2d3748, #1a202c);
+            border: 1px solid #4a5568;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
 
-.info-section h3 {
-    font-size: 32px;
-    margin-bottom: 30px;
-    color: #1f2937;
-    font-weight: 600;
-}
+        .info-section h3 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #f7fafc;
+            font-weight: 600;
+        }
 
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
 
-.info-item {
-    text-align: center;
-}
+        .info-item {
+            text-align: center;
+        }
 
-.info-item h4 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #374151;
-    font-weight: 600;
-}
+        .info-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #e2e8f0;
+            font-weight: 600;
+        }
 
-.info-item p {
-    font-size: 14px;
-    color: #6b7280;
-    line-height: 1.6;
-}
+        .info-item p {
+            font-size: 14px;
+            color: #a0aec0;
+            line-height: 1.6;
+        }
 
-/* ===============================
-   Responsive Design
-   =============================== */
+        /* ===============================
+           Responsive Design
+           =============================== */
 
-@media (max-width: 768px) {
-    .container {
-        padding: 20px 10px;
-    }
-    
-    .title h1 {
-        font-size: 36px;
-    }
-    
-    .subtitle {
-        font-size: 18px;
-    }
-    
-    .courses-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .course-card {
-        padding: 25px;
-    }
-    
-    .course-features {
-        justify-content: center;
-    }
-    
-    .info-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-}
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 10px;
+            }
+            
+            .title h1 {
+                font-size: 36px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+            }
+            
+            .courses-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .course-card {
+                padding: 25px;
+            }
+            
+            .course-features {
+                justify-content: center;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
