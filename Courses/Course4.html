@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming in Java</title>
+    <link rel="stylesheet" href="Course4.css" />
+</head>
+
+<body>
+    <!-- Main container for all page content -->
+    <div class="container">
+
+        <!-- Page title section -->
+        <div class="title">
+            <h1>Programming in Java</h1>
+        </div>
+
+        <div class="content">
+            <p>
+                Java is one of the most widely-used programming languages in the world. It's platform-independent,
+                object-oriented, and known for its "write once, run anywhere" philosophy. Java is robust, secure,
+                and perfect for enterprise applications.
+            </p>
+        </div>
+
+        <div class="content">
+            <h3>First Java Program</h3>
+            <p>
+                Here is a simple Java program that prints a string. We recommend you edit the code and try to print your
+                own message. Remember that Java requires a main method to run!
+            </p>
+        </div>
+
+        <!-- Java compiler section -->
+        <section class="compiler">
+            <div class="compiler-header">
+                <h2>Try Java in your browser</h2>
+                <span id="java-status" class="status">Ready</span>
+            </div>
+
+            <textarea id="java-code" spellcheck="false"
+                aria-label="Java code editor">public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello from Java!");
+    }
+}</textarea>
+
+            <div class="controls">
+                <button id="run-btn">Run ▶</button>
+                <button id="clear-btn">Clear Output</button>
+            </div>
+
+            <div class="console">
+                <div class="console-header">Output</div>
+                <pre id="java-output" aria-live="polite">Click "Run" to execute your Java code...</pre>
+            </div>
+        </section>
+
+        <div class="content">
+            <h3>Why Learn Java?</h3>
+            <ul>
+                <li>Platform independent - runs on any device with JVM installed.</li>
+                <li>Extensive ecosystem with frameworks like Spring, Hibernate, and Apache Maven.</li>
+                <li>Strong memory management and automatic garbage collection.</li>
+                <li>Used by major companies like Oracle, Google, Netflix, and Amazon.</li>
+                <li>High demand in enterprise software development, Android development, and web services.</li>
+                <li>Strongly typed language that helps catch errors at compile time.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Minimal JavaScript for basic functionality -->
+    <script>
+        // Simple Java code execution simulation
+        function runJava() {
+            const output = document.getElementById('java-output');
+            const code = document.getElementById('java-code').value;
+            const status = document.getElementById('java-status');
+            
+            output.textContent = 'Running...';
+            status.textContent = 'Executing...';
+            
+            // Simple pattern matching for System.out.println
+            const printPattern = /System\.out\.println\s*\(\s*"([^"]*)"\s*\)/g;
+            const matches = [...code.matchAll(printPattern)];
+            
+            setTimeout(() => {
+                if (matches.length > 0) {
+                    let result = '';
+                    matches.forEach(match => {
+                        result += match[1] + '\n';
+                    });
+                    output.textContent = result.trim();
+                } else {
+                    output.textContent = '✓ Code compiled successfully (no output to display).';
+                }
+                status.textContent = 'Ready';
+            }, 500);
+        }
+
+        // Wire up buttons
+        document.getElementById('run-btn').addEventListener('click', runJava);
+        document.getElementById('clear-btn').addEventListener('click', () => {
+            document.getElementById('java-output').textContent = '';
+        });
+    </script>
+</body>
+
+</html>

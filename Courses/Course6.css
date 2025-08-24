@@ -1,0 +1,159 @@
+/* Style for the entire page */
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f4f7fa;
+    color: #1c1c1c;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main wrapper for all content */
+.container {
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Title section at the top */
+.title {
+    border-bottom: grey solid 1px;
+}
+
+/* General content text blocks */
+.content {
+    font-size: 25px;
+    text-align: justify;
+}
+
+/* ===============================
+   PHP Compiler Section
+   =============================== */
+
+/* Compiler section wrapper */
+.compiler {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 30px auto;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Header row for compiler (title + status) */
+.compiler-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.compiler-header h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #222;
+}
+
+/* Status label (loading/ready/error) */
+.status {
+    margin-left: auto;
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid #d1d5db;
+    background-color: #f4f7fa;
+    color: #1c1c1c;
+}
+
+/* Textarea where PHP code is written */
+#php-code {
+    width: 95%;
+    min-height: 220px;
+    resize: vertical;
+    padding: 12px 14px;
+    font-family: Consolas, Monaco, "Courier New", monospace;
+    font-size: 15px;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    color: #1c1c1c;
+    margin-bottom: 12px;
+}
+
+/* ===============================
+   Buttons
+   =============================== */
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+/* Run button - PHP purple theme */
+#run-btn {
+    background: #7c3aed;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+#run-btn:hover:not(:disabled) {
+    background: #6d28d9;
+}
+
+#run-btn:disabled {
+    background: #c4b5fd;
+    cursor: not-allowed;
+}
+
+/* Clear Output button */
+#clear-btn {
+    background: #e5e7eb;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+#clear-btn:hover {
+    background: #d1d5db;
+}
+
+/* ===============================
+   Console Output
+   =============================== */
+
+/* Console wrapper */
+.console {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    overflow: hidden;
+}
+
+/* Console header (Output label) */
+.console-header {
+    padding: 8px 12px;
+    background: #e5e7eb;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 1px solid #d1d5db;
+}
+
+/* Output text area */
+#php-output {
+    margin: 0;
+    padding: 12px;
+    min-height: 90px;
+    font-family: Consolas, Monaco, "Courier New", monospace;
+    font-size: 15px;
+    color: #111827;
+    white-space: pre-wrap;
+}
