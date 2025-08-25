@@ -74,6 +74,14 @@ nav ul li a:hover {
   color: #8a2be2;
 }
 
+.divider {
+  width: 1px;
+  height: 20px;
+  background: #555;
+  margin: 5px 0;
+  margin-left: 25px;
+}
+
 /* Hero Section */
 .hero {
   text-align: center;
