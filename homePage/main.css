@@ -1,13 +1,15 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body */
 body {
   font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(to right, #202020, #777777, #202020);
-  color: #1c1c1c;
+  background: #0a0a0a; /* black background */
+  color: #e0e0e0; /* light text */
 }
 
 /* Navbar */
@@ -16,19 +18,18 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
-  background: rgba(26, 26, 26, 1);  /* fully opaque at top */
+  background: rgba(20, 0, 40, 0.95);
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 2px solid #8a2be2;
+  border-bottom: 2px solid #9b30ff;
+  backdrop-filter: blur(5px);
   transition: background 0.3s ease, backdrop-filter 0.3s ease;
-  backdrop-filter: blur(0); /* no blur at top */
-  
 }
 
 nav #logo-container img {
   height: 50px;
-    cursor: pointer;
+  cursor: pointer;
   transition: transform 0.3s;
 }
 
@@ -54,13 +55,13 @@ nav ul li a {
 }
 
 nav ul li a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0%;
   height: 2px;
   left: 0;
   bottom: -3px;
-  background: #8a2be2;
+  background: #9b30ff;
   transition: 0.3s;
 }
 
@@ -70,7 +71,7 @@ nav ul li a.active::after {
 }
 
 nav ul li a:hover {
-  color: #8a2be2;
+  color: #9b30ff;
 }
 
 .divider {
@@ -81,18 +82,21 @@ nav ul li a:hover {
   margin-left: 25px;
 }
 
+/* Notification Bar */
 .notification-bar {
-  background-color: #e6f0ff;
+  background-color: #1a001f;
   font-size: 16px;
   padding: 10px 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  color: #e0e0e0;
 }
 
 .notification-bar a {
   margin-left: 5px;
-  color: #0057e7;
+  color: #b266ff;
   text-decoration: none;
   font-weight: 500;
 }
@@ -105,7 +109,7 @@ nav ul li a:hover {
   position: absolute;
   right: 25px;
   font-size: 30px;
-  color: #0057e7;
+  color: #b266ff;
   cursor: pointer;
   background: transparent;
   margin-left: 20px;
@@ -115,16 +119,17 @@ nav ul li a:hover {
 }
 
 .close-btn:hover {
-  color: #003d99;
-  background-color: aliceblue;
+  color: #8000ff;
+  background-color: #1a001f;
 }
 
+/* Hero Section */
 .container-1 {
   background-image: url("Bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: white;
+  color: #e0e0e0;
   padding: 80px 0;
   text-align: center;
 }
@@ -135,7 +140,7 @@ nav ul li a:hover {
   font-size: 50px;
   margin-bottom: 10px;
   font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  text-shadow: 2px 2px 4px rgba(155, 48, 255, 0.5);
 }
 
 .container-1 p {
@@ -143,33 +148,36 @@ nav ul li a:hover {
   margin: 10px;
 }
 
-.container-1 .btn {
-  margin-top: 10px;
+/* Neon Button */
+.btn,
+.neon-btn {
   display: inline-block;
   padding: 12px 30px;
-  background-color: #009cb0;
+  background-color: #9b30ff;
   color: white;
   text-decoration: none;
   font-size: 20px;
   border-radius: 6px;
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
+  box-shadow: 0 0 5px #9b30ff, 0 0 10px #9b30ff, 0 0 20px #9b30ff;
+  transition: all 0.3s ease;
 }
 
-.container-1 .btn:hover {
-  background-color: #007382;
+.btn:hover,
+.neon-btn:hover {
+  background-color: #6e00b3;
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 95, 102, 0.6);
+  box-shadow: 0 0 10px #9b30ff, 0 0 20px #9b30ff, 0 0 40px #9b30ff;
 }
 
+/* Container 2 */
 .container-2 {
-  background-color: #efefef;
+  background-color: #1a001f;
   margin: 40px 60px;
   border-radius: 16px;
   padding: 60px 30px;
   text-align: center;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   position: relative;
   overflow: hidden;
 }
@@ -177,7 +185,7 @@ nav ul li a:hover {
 .container-2 h2 {
   font-size: 40px;
   min-height: 50px;
-  color: #003049;
+  color: #d8b0ff;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -185,39 +193,18 @@ nav ul li a:hover {
 .container-2 p {
   font-size: 20px;
   margin: 30px;
-  color: #333;
+  color: #ccc;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
 }
 
-.container-2 .btn {
-  display: inline-block;
-  padding: 14px 36px;
-  background-color: #009cb0;
-  color: #fff;
-  border: none;
-  text-decoration: none;
-  font-size: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 115, 130, 0.4);
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.container-2 .btn:hover {
-  background-color: #007382;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 95, 102, 0.6);
-}
-
 /* Main Section */
 #container-3 {
   padding: 60px 20px;
   padding-bottom: 100px;
-  background-color: #f4f6f9;
-  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a0a;
 }
 
 /* Section Heading */
@@ -225,24 +212,18 @@ nav ul li a:hover {
   font-size: 40px;
   text-align: center;
   min-height: 50px;
-  color: #003049;
+  color: #d8b0ff;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
 .section-description {
   text-align: center;
-  color: #555;
+  color: #aaa;
   max-width: 700px;
   margin: 0 auto 30px auto;
   font-size: 16px;
   line-height: 1.5;
-}
-
-/* Right section */
-.courses-section {
-  max-width: 1300px;
-  margin: 0 auto;
 }
 
 /* Badges */
@@ -260,7 +241,7 @@ nav ul li a:hover {
   font-size: 14px;
   font-weight: 600;
   color: white;
-  background-color: #5d6d7e;
+  background-color: #5d00b3;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -271,24 +252,29 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
-.badge.new { background-color: #27ae60; }
-.badge.beginner { background-color: #3498db; }
-.badge.popular { background-color: #f39c12; }
+.badge.new {
+  background-color: #9b30ff;
+}
+.badge.beginner {
+  background-color: #7f00ff;
+}
+.badge.popular {
+  background-color: #d580ff;
+}
 
-/* Cards grid */
+/* Cards */
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   margin-top: 20px;
 }
 
-/* Course card */
 .course-card {
   position: relative;
-  background: #fff;
+  background: #1a001f;
   border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -296,7 +282,7 @@ nav ul li a:hover {
 .course-card:hover {
   cursor: pointer;
   transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 30px rgba(155, 48, 255, 0.6);
 }
 
 .course-card img {
@@ -310,21 +296,21 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
-/* Free trial badge */
+/* Free Trial Badge */
 .trial-badge {
   position: absolute;
   top: 15px;
   left: 15px;
-  background-color: #00b4db;
+  background-color: #9b30ff;
   color: white;
   padding: 8px 18px;
   font-size: 14px;
   font-weight: bold;
   border-radius: 30px;
-  box-shadow: 0 4px 8px rgba(0, 180, 219, 0.3);
+  box-shadow: 0 4px 8px rgba(155, 48, 255, 0.3);
 }
 
-/* Course content */
+/* Course Content */
 .course-content {
   padding: 20px;
 }
@@ -332,7 +318,7 @@ nav ul li a:hover {
 .course-content .provider {
   font-size: 16px;
   font-weight: bold;
-  color: #00b4db;
+  color: #d580ff;
   display: block;
   margin-bottom: 8px;
   text-transform: uppercase;
@@ -342,95 +328,66 @@ nav ul li a:hover {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #2c3e50;
+  color: #fff;
 }
 
 .course-content .type {
   font-size: 14px;
-  color: #888;
+  color: #aaa;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 24px;
-  }
-
-  .badges {
-    gap: 10px;
-  }
-
-  .course-content h3 {
-    font-size: 18px;
-  }
-
-  .course-content .provider {
-    font-size: 14px;
-  }
-}
-
+/* Footer */
 .footer {
   background-color: #1a1a1a;
   color: white;
   padding: 60px 0 30px;
   border-top: 5px solid #6800b3;
 }
-
 .footer-container {
   margin: 10px 100px;
   padding: 0 40px;
 }
-
 .footer-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 60px;
   margin-bottom: 50px;
 }
-
 .footer-brand {
   grid-column: 1;
 }
-
 .logo-section {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 25px;
 }
-
 .logo-1 {
   margin-left: 20px;
   width: 110px;
   height: 80px;
 }
-
 .logo-subtitle {
   font-size: 0.9rem;
   color: #999;
   margin-bottom: 20px;
 }
-
 .contact-info {
   margin-bottom: 20px;
 }
-
 .contact-info p {
   color: #ccc;
   margin-bottom: 8px;
   font-size: 0.9rem;
 }
-
 .contact-info strong {
   color: white;
 }
-
 .social-links {
   display: flex;
   gap: 12px;
   margin-bottom: 20px;
 }
-
 .social-links a {
   width: 35px;
   height: 35px;
@@ -444,12 +401,10 @@ nav ul li a:hover {
   transition: all 0.3s ease;
   font-size: 1rem;
 }
-
 .social-links a:hover {
   background: #6800b3;
   transform: translateY(-2px);
 }
-
 .contact-btn {
   background: transparent;
   border: 2px solid #6800b3;
@@ -463,12 +418,10 @@ nav ul li a:hover {
   text-decoration: none;
   display: inline-block;
 }
-
 .contact-btn:hover {
   background: #6800b3;
   color: white;
 }
-
 .footer-section h3 {
   color: white;
   font-size: 1.1rem;
@@ -477,15 +430,12 @@ nav ul li a:hover {
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
 .footer-section ul {
   list-style: none;
 }
-
 .footer-section ul li {
   margin-bottom: 12px;
 }
-
 .footer-section ul li a {
   color: #ccc;
   text-decoration: none;
@@ -493,12 +443,10 @@ nav ul li a:hover {
   transition: color 0.3s ease;
   line-height: 1.4;
 }
-
 .footer-section ul li a:hover {
   color: #7f00da;
   text-decoration: underline;
 }
-
 .footer-bottom {
   border-top: 1px solid #333;
   padding-top: 25px;
@@ -508,67 +456,57 @@ nav ul li a:hover {
   flex-wrap: wrap;
   gap: 20px;
 }
-
 .copyright {
   color: #999;
   font-size: 0.9rem;
 }
-
 .footer-bottom-links {
   display: flex;
   gap: 20px;
 }
-
 .footer-bottom-links a {
   color: #999;
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s ease;
 }
-
 .footer-bottom-links a:hover {
   color: #7f00da;
   text-decoration: underline;
 }
-
 .separator {
   color: #666;
 }
-
 @media (max-width: 1024px) {
   .footer-content {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
   }
-
   .footer-brand {
     grid-column: 1 / -1;
   }
 }
-
 @media (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
-
   .footer-container {
     padding: 0 20px;
   }
 }
-
 @media (max-width: 480px) {
   .footer-content {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-
   .footer-bottom {
     flex-direction: column;
     text-align: center;
   }
 }
 
+/* Scroll to Top Button */
 #topBtn {
   display: none;
   position: fixed;
@@ -578,7 +516,7 @@ nav ul li a:hover {
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: #5b0aac;
+  background-color: #9b30ff;
   color: white;
   cursor: pointer;
   padding: 12px 16px;
@@ -588,5 +526,21 @@ nav ul li a:hover {
 }
 
 #topBtn:hover {
-  background-color: #7700a9;
+  background-color: #6e00b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 24px;
+  }
+  .course-content h3 {
+    font-size: 18px;
+  }
+  .course-content .provider {
+    font-size: 14px;
+  }
+  .badges {
+    gap: 10px;
+  }
 }
