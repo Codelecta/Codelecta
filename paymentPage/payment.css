@@ -1,0 +1,209 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f5f8;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.checkout-section {
+  flex: 2;
+  padding: 2rem;
+}
+
+.checkout-section h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+}
+
+.checkout-section p {
+  color: #6c7380;
+  margin-bottom: 2rem;
+}
+
+.billing-info h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #2d3748;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4c51bf;
+  box-shadow: 0 0 0 2px rgba(76, 81, 191, 0.25);
+}
+
+.card-details {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: #eff3fe;
+  border-color: #d1daff;
+}
+
+.card-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-details-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.card-details-header img {
+  height: 20px;
+}
+
+.card-inputs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card-inputs .form-group {
+  flex: 1;
+  min-width: 45%;
+}
+
+.card-inputs .form-group.full-width {
+  flex: 100%;
+}
+
+.card-inputs .form-group.half-width {
+  flex: 1;
+}
+
+.card-inputs .form-group.half-width:first-child {
+  min-width: calc(50% - 0.5rem);
+}
+
+.card-inputs .form-group.half-width:last-child {
+  min-width: calc(50% - 0.5rem);
+}
+
+.terms-text {
+  font-size: 0.875rem;
+  color: #6c7380;
+  margin-top: 1.5rem;
+}
+
+.terms-text a {
+  color: #4c51bf;
+  text-decoration: none;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #4c51bf;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #3b3f9b;
+}
+
+.summary-section {
+  flex: 1;
+  background-color: #f7fafc;
+  padding: 2rem;
+  border-left: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.summary-section h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+.summary-section p {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+.summary-section strong {
+  font-weight: 500;
+}
+
+.cancel-info {
+  font-size: 0.875rem;
+  color: #6c7380;
+  margin-top: auto;
+}
+
+.cancel-info strong {
+  color: #1a202c;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .summary-section {
+    border-left: none;
+    border-top: 1px solid #e2e8f0;
+    order: -1;
+  }
+}
