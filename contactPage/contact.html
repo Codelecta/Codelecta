@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for proper document setup -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback and Queries</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+
+  <body>
+    <nav>
+      <a id="logo-container" href="main.html">
+        <img src="Logo.png" alt="Logo" class="logo" />
+      </a>
+    </nav>
+
+    <h1>Contact Us</h1>
+
+    <!-- Main container for both form and map -->
+    <div class="main-container">
+      <!-- Left side - Feedback Form -->
+      <div class="form-container">
+        <!-- Form heading -->
+        <h3>Contact Form</h3>
+
+        <!-- Main form element with ID for JavaScript targeting -->
+        <form id="feedbackForm" novalidate>
+          <!-- First + Last Name Row -->
+          <div class="name-row">
+            <!-- First Name Field - Required -->
+            <div class="form-group">
+              <label for="firstName"
+                >First Name:<span class="required"></span></label
+              >
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="Your First Name"
+                required
+              />
+              <span class="error-message" id="firstName-error"></span>
+            </div>
+
+            <!-- Last Name Field - Required -->
+            <div class="form-group">
+              <label for="lastName"
+                >Last Name:<span class="required"></span></label
+              >
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Your Last Name"
+                required
+              />
+              <span class="error-message" id="lastName-error"></span>
+            </div>
+          </div>
+
+          <!-- Email Address Field - Required -->
+          <div class="form-group">
+            <label for="email"
+              >Email Address:<span class="required"></span></label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <span class="error-message" id="email-error"></span>
+          </div>
+
+          <!-- Contact Number Field - Optional -->
+          <div class="form-group">
+            <label for="contact">Contact Number:</label>
+            <input
+              type="tel"
+              id="contact"
+              name="contact"
+              placeholder="Contact Number"
+            />
+            <span class="error-message" id="contact-error"></span>
+          </div>
+
+          <!-- Feedback/Query Field - Required -->
+          <div class="form-group">
+            <label for="feedback">Message:<span class="required"></span></label>
+            <textarea
+              id="feedback"
+              name="feedback"
+              placeholder="Max Allowed Characters: 300"
+              maxlength="300"
+              required
+            ></textarea>
+
+            <!-- Character counter -->
+            <div class="char-counter">
+              <span id="charCount">0</span>/300 characters
+            </div>
+            <span class="error-message" id="feedback-error"></span>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        <!-- Success message (initially hidden) -->
+        <div id="success-message" class="success-message" style="display: none">
+          <p>Thank you for your feedback! We will get back to you soon.</p>
+        </div>
+      </div>
+
+      <!-- Right side - Map Section -->
+      <div class="map-container">
+        <!-- Map with embedded Google Maps -->
+        <div class="map-wrapper">
+          <iframe
+            src="https://www.google.com/maps?q=27.6874268,85.3349549&z=16&hl=en&output=embed"
+          >
+          </iframe>
+        </div>
+
+        <!-- Location Info Card -->
+        <div class="location-info">
+          <div class="location-header">
+            <div class="location-icon">📍</div>
+            <div class="location-details">
+              <h3>Codelecta | Coding Classes</h3>
+            </div>
+            <div class="rating">
+              <span class="stars">4.8 ⭐⭐⭐⭐⭐</span>
+              <a href="#" class="reviews-link">894 reviews</a>
+            </div>
+          </div>
+          <div class="address">
+            <p>📌 Baneshwor, Kathmandu, Nepal</p>
+            <p>☎️ Contact Number: 97673892972</p>
+            <p>📧 Email: codelecta@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Simple Feedback Form JavaScript
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("feedbackForm");
+        const textarea = document.getElementById("feedback");
+        const charCount = document.getElementById("charCount");
+
+        // Character counter for textarea
+        textarea.addEventListener("input", function () {
+          const currentLength = this.value.length;
+          charCount.textContent = currentLength;
+
+          // Change color when approaching limit
+          if (currentLength > 250) {
+            charCount.style.color = "#e53e3e";
+          } else {
+            charCount.style.color = "#718096";
+          }
+        });
+
+        // Form submission
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(this);
+          const data = {
+            firstName: formData.get("firstName"),
+            lastName: formData.get("lastName"),
+            email: formData.get("email"),
+            feedback: formData.get("feedback"),
+          };
+
+          // Check if required fields are filled
+          if (data.firstName && data.lastName && data.email && data.feedback) {
+            alert("Thank you for your feedback! We will get back to you soon.");
+
+            // Reset form
+            this.reset();
+            charCount.textContent = "0";
+            charCount.style.color = "#718096";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
