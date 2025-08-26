@@ -16,31 +16,71 @@ body {
 /* Navbar */
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background: linear-gradient(120deg, #6a0dad, #2a003f, #6a0dad);
-  padding: 20px;
-  box-shadow: 0 6px 20px rgba(106, 13, 173, 0.6);
-  height: 85px;
-  border-bottom: 2px solid rgba(186, 85, 211, 0.4);
+  padding: 15px 50px;
+  background: rgba(20, 0, 40, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid #9b30ff;
+  backdrop-filter: blur(5px);
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 
-#logo-container {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  transition: transform 0.3s ease-in-out;
-}
-
-#logo-container:hover {
+nav #logo-container img {
+  height: 50px;
   cursor: pointer;
-  transform: scale(1.08);
+  transition: transform 0.3s;
 }
 
-.logo {
-  width: 90px;
-  height: auto;
-  object-fit: contain;
+nav #logo-container img:hover {
+  transform: scale(1.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background: #9b30ff;
+  transition: 0.3s;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #9b30ff;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background: #555;
+  margin: 5px 0;
+  margin-left: 25px;
 }
 
 /* Title + Description */
