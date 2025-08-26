@@ -10,161 +10,76 @@ body {
   color: #1c1c1c;
 }
 
+/* Navbar */
 nav {
   display: flex;
-  background: linear-gradient(to right, #000000, #3b0066, #5b009c);
-  padding: 15px 30px;
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: rgba(26, 26, 26, 1);  /* fully opaque at top */
   position: sticky;
   top: 0;
-  z-index: 1000;
-  height: 100px;
+  z-index: 100;
+  border-bottom: 2px solid #8a2be2;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  backdrop-filter: blur(0); /* no blur at top */
+  
 }
 
-#logo-container {
+nav #logo-container img {
+  height: 50px;
+    cursor: pointer;
+  transition: transform 0.3s;
+}
+
+nav #logo-container img:hover {
+  transform: scale(1.1);
+}
+
+nav ul {
   display: flex;
-  align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
   text-decoration: none;
-}
-
-.logo {
-  padding: 10px;
-  margin-left: 20px;
-  width: 120px;
-  height: 90px;
-  object-fit: cover;
-}
-
-h1 {
-  font-family: "Arial", sans-serif;
-  font-size: 30px;
-  color: #ffffff;
-  margin-left: 10px;
-  align-items: center;
-  text-shadow: #ffffff 1px 1px 2px;
-}
-
-#logo-container:hover {
-  cursor: pointer;
-}
-
-.left-nav {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  font-size: 18px;
-  margin-left: 22rem;
-  margin-right: auto;
-  flex-wrap: wrap;
+  color: #fff;
   font-weight: 500;
+  position: relative;
+  transition: 0.3s;
 }
 
-.option {
-  padding: 8px 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background: #8a2be2;
+  transition: 0.3s;
 }
 
-.option:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  color: #d3d3d3;
-  cursor: pointer;
-  text-decoration: underline;
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #8a2be2;
 }
 
 .divider {
-  display: inline-block;
-  height: 30px;
   width: 1px;
-  background-color: #8d8d8d;
+  height: 20px;
+  background: #555;
+  margin: 5px 0;
+  margin-left: 25px;
 }
-
-.right-nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.login,
-.sign-up {
-  background: linear-gradient(to right, #6a0dad, #8a2be2);
-  color: #ffffff;
-  padding: 10px 25px;
-  border: 2px solid #ffffff;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.login:hover,
-.sign-up:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px #8a2be2(0, 180, 219, 0.4);
-  cursor: pointer;
-}
-
-/* Hamburger Icon */
-.hamburger {
-  display: none;
-  font-size: 28px;
-  color: #ffffff;
-  cursor: pointer;
-}
-
-        /* Responsive adjustments for screens smaller than 992px (md breakpoint) */
-        @media (max-width: 991px) { /* Equivalent to md: breakpoint in Tailwind for custom CSS */
-            .hamburger {
-                display: block; /* Show hamburger on small screens */
-            }
-
-            .left-nav,
-            .right-nav {
-                display: none; /* Hide nav items by default on small screens */
-                flex-direction: column;
-                width: 100%;
-                gap: 15px;
-                padding-top: 10px; /* Add some padding when expanded */
-            }
-
-            .left-nav.active,
-            .right-nav.active {
-                display: flex; /* Show nav items when active */
-            }
-
-            .option,
-            .login,
-            .sign-up {
-                width: 100%;
-                text-align: left;
-            }
-
-            .divider-line {
-                display: none; /* Hide divider on small screens */
-            }
-
-            /* Adjust nav padding for smaller screens */
-            nav {
-                padding: 15px 20px;
-            }
-        }
-
-        /* Further adjustments for screens smaller than 768px (sm breakpoint) */
-        @media (max-width: 767px) { /* Equivalent to sm: breakpoint in Tailwind for custom CSS */
-            .logo-img {
-                height: 40px; /* Smaller logo on very small screens */
-            }
-
-            .logo-text {
-                font-size: 18px; /* Smaller heading on very small screens */
-                margin-left: 5px;
-            }
-
-            .left-nav {
-                margin-left: 0; /* Remove left margin on very small screens */
-            }
-        }
 
 .notification-bar {
   background-color: #e6f0ff;
@@ -205,7 +120,7 @@ h1 {
 }
 
 .container-1 {
-  background-image: url("Bg.jpg");
+  background-image: url("Bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
