@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="container">
+        <div class="checkout-section">
+            <header>
+                <h1>Checkout</h1>
+                <p>All fields are required</p>
+            </header>
+            <main>
+                <section class="billing-info">
+                    <h2>Billing Information</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select id="country" required>
+                                <option value="" disabled selected>Select your country</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <!-- Add more countries as needed -->
+                            </select>
+                        </div>
+                        <div class="card-details">
+                            <div class="card-details-header">
+                                <h3>Pay with Card</h3>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png" alt="Visa Logo">
+                            </div>
+                            <div class="card-inputs">
+                                <div class="form-group full-width">
+                                    <label for="card-number">Card Number</label>
+                                    <input type="text" id="card-number" placeholder="Enter your card number" required>
+                                </div>
+                                <div class="form-group half-width">
+                                    <label for="expiry-date">Expiry Date</label>
+                                    <input type="text" id="expiry-date" placeholder="MM / YY" required>
+                                </div>
+                                <div class="form-group half-width">
+                                    <label for="cvc">CVC</label>
+                                    <input type="text" id="cvc" placeholder="123" required>
+                                </div>
+                            </div>
+                            <p class="terms-text">By providing your card information, you allow us to charge your card according to our terms.</p>
+                        </div>
+                        <button type="submit" class="submit-button">Start Free Trial</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+        <aside class="summary-section">
+            <h2>Subscription Summary</h2>
+            <p>You're signing up for a <strong>7-day free trial</strong>. You won't be charged until it ends.</p>
+            <p class="cancel-info">Cancel anytime before <strong>September 3, 2025</strong>.</p>
+        </aside>
+    </div>
+</body>
+</html>
