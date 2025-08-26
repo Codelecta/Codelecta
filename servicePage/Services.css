@@ -41,6 +41,10 @@ nav #logo-container img:hover {
 nav ul {
   display: flex;
   list-style: none;
+  width: 100%;
+  justify-content: right;
+  align-items: center;
+  transition: left 0.3s ease;
 }
 
 nav ul li {

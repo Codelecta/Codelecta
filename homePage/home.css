@@ -49,6 +49,7 @@ nav ul {
 .left-links {
   display: flex;
   align-items: center;
+  gap: 15px;
 }
 
 .right-links {

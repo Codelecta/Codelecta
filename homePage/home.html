@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home | Codelecta</title>
+  <link rel="stylesheet" href="../menuJS.html">
   <link rel="stylesheet" href="home.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
@@ -31,8 +32,8 @@
       <li><a href="../feedbackPage/feedback.html">Feedback</a></li>
     </div>
     <div class="right-links">
-      <li><a href="../loginPage/login.html" class="login">Login</a></li>
-      <li><a href="../" class="signup">Sign Up</a></li>
+      <li><a href="../loginPage/loginpage.html" class="login">Login</a></li>
+      <li><a href="../loginPage/signup.html" class="signup">Sign Up</a></li>
     </div>
   </ul>
 </nav>
@@ -51,7 +52,7 @@
       Interactive courses, expert instructors, and flexible learning options.
     </p>
     <br />
-    <a href="#" class="btn">Get Started</a>
+    <a href="../servicePage/Services.html" class="btn">Get Started</a>
   </section>
 
   <section class="container-2">
@@ -61,7 +62,7 @@
       succeed in the tech industry. Whether you're a beginner or an
       experienced developer, we have something for everyone.
     </p>
-    <a href="#" class="btn">Learn More</a>
+    <a href="../coursePage/Courses.html" class="btn">Learn More</a>
   </section>
 
   <section id="container-3">
@@ -80,6 +81,7 @@
       </div>
 
       <div class="cards-container">
+        <a href="../coursePage/Course1.html">
         <div class="course-card">
           <img
             src="https://img.freepik.com/free-photo/online-web-design_53876-95309.jpg?t=st=1753106916~exp=1753110516~hmac=e54244e5fd5f5c37c17e9e3ad3672b7a0c02aa5f20b4d396d8f0a557f2f5e512&w=1380"
@@ -90,8 +92,9 @@
             <h3>Introduction to Html</h3>
             <p class="type">Professional Certificate</p>
           </div>
-        </div>
+        </div></a>
 
+        <a href="../coursePage/Course2.html">
         <div class="course-card">
           <img src="https://www.sketchappsources.com/resources/source-image/python-logo.png" alt="Course 2" />
           <span class="trial-badge">Free Trial</span>
@@ -100,8 +103,9 @@
             <h3>Programming in Python</h3>
             <p class="type">Specialization</p>
           </div>
-        </div>
+        </div></a>
 
+        <a href="../coursePage/Course3.html">
         <div class="course-card">
           <img src="https://www.patterns.dev/img/reactjs/react-logo@3x.svg" alt="Course 3" />
           <span class="trial-badge">Free Trial</span>
@@ -110,7 +114,7 @@
             <h3>React Basics</h3>
             <p class="type">Professional Certificate</p>
           </div>
-        </div>
+        </div></a>
       </div>
     </div>
   </section>
@@ -206,18 +210,12 @@
   <button onclick="scrollToTop()" id="topBtn" title="Go to top">
     <i class="fas fa-arrow-up"></i>
   </button>
+  <script src="../menu.js"></script>
 </body>
 <script>
   document.getElementById("closeBtn").onclick = function () {
     document.getElementById("notificationBar").style.display = "none";
   };
-
-    const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
-
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
 
   // Show button after scrolling 300px
   window.onscroll = function () {
