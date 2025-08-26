@@ -68,19 +68,33 @@ nav ul li a {
 }
 
 nav ul li a.signup {
-  background: #9b30ff;
+  background: transparent;
+  color: #9b30ff;
+  border: 2px solid #9b30ff;
+  border-radius: 8px;
   padding: 5px 15px;
-  border-radius: 10px;
-  color: #fff;
-  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 nav ul li a.signup:hover {
-  background: #7a1fc0;
+  background: #9b30ff;
+  color: #fff;
+  box-shadow: 0 0 18px #a020f0, 0 0 30px #ba55d3;
+  transform: scale(1.05);
 }
 
 nav ul li a.login {
   color: #9b30ff;
+}
+
+nav ul li a.login:hover {
+  color: #d580ff;
+  background-color: #6800b316;
+  padding: 5px 15px;
+  border-radius: 8px;
 }
 
 nav ul li a::after {
