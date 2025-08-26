@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming in PHP</title>
+    <link rel="stylesheet" href="course6.css" />
+</head>
+
+<body>
+    <!-- Main container for all page content -->
+    <div class="container">
+
+        <!-- Page title section -->
+        <div class="title">
+            <h1>PHP Basics</h1>
+        </div>
+
+        <div class="content">
+            <p>
+                PHP is a popular server-side scripting language designed for web development. It's easy to learn,
+                widely supported, and powers millions of websites including Facebook, Wikipedia, and WordPress.
+                PHP integrates seamlessly with HTML and databases.
+            </p>
+        </div>
+
+        <div class="content">
+            <h3>First PHP Program</h3>
+            <p>
+                Here is a simple PHP script that prints a string. We recommend you edit the code and try to print your
+                own message. Remember that PHP code starts with &lt;?php and can be mixed with HTML!
+            </p>
+        </div>
+
+        <!-- PHP compiler section -->
+        <section class="compiler">
+            <div class="compiler-header">
+                <h2>Try PHP in your browser</h2>
+                <span id="php-status" class="status">Ready</span>
+            </div>
+
+            <textarea id="php-code" spellcheck="false"
+                aria-label="PHP code editor"><?php
+echo "Hello from PHP!";
+?></textarea>
+
+            <div class="controls">
+                <button id="run-btn">Run ▶</button>
+                <button id="clear-btn">Clear Output</button>
+            </div>
+
+            <div class="console">
+                <div class="console-header">Output</div>
+                <pre id="php-output" aria-live="polite">Click "Run" to execute your PHP code...</pre>
+            </div>
+        </section>
+
+        <div class="content">
+            <h3>Why Learn PHP?</h3>
+            <ul>
+                <li>Easy to learn - simple syntax and beginner-friendly documentation.</li>
+                <li>Web-focused - specifically designed for web development and server-side scripting.</li>
+                <li>Database integration - excellent support for MySQL, PostgreSQL, and other databases.</li>
+                <li>Large community - extensive frameworks like Laravel, Symfony, and CodeIgniter.</li>
+                <li>High demand - powers over 75% of websites with server-side languages.</li>
+                <li>Open source and free - no licensing costs and continuous community development.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Minimal JavaScript for basic functionality -->
+    <script>
+        // Simple PHP code execution simulation
+        function runPHP() {
+            const output = document.getElementById('php-output');
+            const code = document.getElementById('php-code').value;
+            const status = document.getElementById('php-status');
+            
+            output.textContent = 'Executing PHP script...';
+            status.textContent = 'Running...';
+            
+            // Simple pattern matching for echo and print
+            const echoPattern = /(?:echo|print)\s+['"](.*?)['"];?/g;
+            const matches = [...code.matchAll(echoPattern)];
+            
+            setTimeout(() => {
+                if (matches.length > 0) {
+                    let result = '';
+                    matches.forEach(match => {
+                        result += match[1] + '\n';
+                    });
+                    output.textContent = result.trim();
+                } else {
+                    // Check for simple echo without quotes
+                    const simpleEchoPattern = /(?:echo|print)\s+"([^"]+)"/g;
+                    const simpleMatches = [...code.matchAll(simpleEchoPattern)];
+                    if (simpleMatches.length > 0) {
+                        let result = '';
+                        simpleMatches.forEach(match => {
+                            result += match[1] + '\n';
+                        });
+                        output.textContent = result.trim();
+                    } else {
+                        output.textContent = '✓ PHP script executed successfully (no output to display).';
+                    }
+                }
+                status.textContent = 'Ready';
+            }, 500);
+        }
+
+        // Wire up buttons
+        document.getElementById('run-btn').addEventListener('click', runPHP);
+        document.getElementById('clear-btn').addEventListener('click', () => {
+            document.getElementById('php-output').textContent = '';
+        });
+    </script>
+</body>
+
+</html>

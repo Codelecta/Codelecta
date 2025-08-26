@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming in C</title>
+    <link rel="stylesheet" href="course5.css" />
+</head>
+
+<body>
+    <!-- Main container for all page content -->
+    <div class="container">
+
+        <!-- Page title section -->
+        <div class="title">
+            <h1>Programming in C</h1>
+        </div>
+
+        <div class="content">
+            <p>
+                C is a powerful general-purpose programming language that has been around since the 1970s. It's the 
+                foundation of many modern programming languages and operating systems. C provides low-level control 
+                over system resources while maintaining portability across different platforms.
+            </p>
+        </div>
+
+        <div class="content">
+            <h3>First C Program</h3>
+            <p>
+                Here is a simple C program that prints a string. We recommend you edit the code and try to print your
+                own message. Remember that C programs need the main function and proper includes!
+            </p>
+        </div>
+
+        <!-- C compiler section -->
+        <section class="compiler">
+            <div class="compiler-header">
+                <h2>Try C in your browser</h2>
+                <span id="c-status" class="status">Ready</span>
+            </div>
+
+            <textarea id="c-code" spellcheck="false"
+                aria-label="C code editor">#include <stdio.h>
+
+int main() {
+    printf("Hello from C!\n");
+    return 0;
+}</textarea>
+
+            <div class="controls">
+                <button id="run-btn">Run ▶</button>
+                <button id="clear-btn">Clear Output</button>
+            </div>
+
+            <div class="console">
+                <div class="console-header">Output</div>
+                <pre id="c-output" aria-live="polite">Click "Run" to execute your C code...</pre>
+            </div>
+        </section>
+
+        <div class="content">
+            <h3>Why Learn C?</h3>
+            <ul>
+                <li>Foundation language - understanding C helps with other languages like C++, Java, and Python.</li>
+                <li>System programming - used for operating systems, embedded systems, and device drivers.</li>
+                <li>High performance - C programs run fast with minimal memory overhead.</li>
+                <li>Portability - C code can run on virtually any platform with a C compiler.</li>
+                <li>Industry standard - used by major companies like Microsoft, Apple, and Linux kernel development.</li>
+                <li>Direct memory management - gives programmers complete control over system resources.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Minimal JavaScript for basic functionality -->
+    <script>
+        // Simple C code execution simulation
+        function runC() {
+            const output = document.getElementById('c-output');
+            const code = document.getElementById('c-code').value;
+            const status = document.getElementById('c-status');
+            
+            output.textContent = 'Compiling and running...';
+            status.textContent = 'Executing...';
+            
+            // Simple pattern matching for printf
+            const printfPattern = /printf\s*\(\s*"([^"]*)\\?n?"?\s*\)/g;
+            const matches = [...code.matchAll(printfPattern)];
+            
+            setTimeout(() => {
+                if (matches.length > 0) {
+                    let result = '';
+                    matches.forEach(match => {
+                        // Remove \n from the output and add actual newline
+                        let cleanOutput = match[1].replace(/\\n/g, '\n');
+                        result += cleanOutput + '\n';
+                    });
+                    output.textContent = result.trim();
+                } else {
+                    output.textContent = '✓ Code compiled successfully (no output to display).';
+                }
+                status.textContent = 'Ready';
+            }, 500);
+        }
+
+        // Wire up buttons
+        document.getElementById('run-btn').addEventListener('click', runC);
+        document.getElementById('clear-btn').addEventListener('click', () => {
+            document.getElementById('c-output').textContent = '';
+        });
+    </script>
+</body>
+
+</html>

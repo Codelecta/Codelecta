@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming in Python</title>
+    <link rel="stylesheet" href="Course2.css" />
+</head>
+
+<body>
+    <!-- Main container for all page content -->
+    <div class="container">
+
+        <!-- Page title section -->
+        <div class="title">
+            <h1>Programming in Python</h1>
+        </div>
+
+        <div class="content">
+            <p>
+                Python is one of the most popular programming languages. It's simple to use, packed with features and
+                supported
+                by a wide range of libraries and frameworks. Its clean syntax makes it beginner-friendly.
+            </p>
+        </div>
+
+        <div class="content">
+            <h3> First Python Program</h3>
+            <p>
+                Here is a simple Python code, printing a string. We recommend you to edit the code and try to print your
+                own name.
+            </p>
+
+        </div>
+
+        <!-- Python compiler section -->
+        <section class="compiler">
+            <div class="compiler-header">
+                <h2>Try Python in your browser</h2>
+                <span id="py-status" class="status">Loading Python…</span>
+            </div>
+
+            <textarea id="py-code" spellcheck="false"
+                aria-label="Python code editor">print("Hello from Python!")</textarea>
+
+            <div class="controls">
+                <button id="run-btn" disabled>Run ▶</button>
+                <button id="clear-btn">Clear Output</button>
+            </div>
+
+            <div class="console">
+                <div class="console-header">Output</div>
+                <pre id="py-output" aria-live="polite">Waiting…</pre>
+            </div>
+        </section>
+    </div>
+    <div class="content">
+        <h3>Why Learn Python?</h3>
+        <ul>
+            <li>Requires fewer lines of code compared to other programming languages.</li>
+            <li>Provides Libraries / Frameworks like Django, Flask, Pandas, Tensorflow, Scikit-learn and many more</li>
+            <li>Cross-platform, works on Windows, Mac and Linux without major changes.</li>
+            <li>Used by top tech companies like Google, Netflix and NASA.</li>
+            <li>Many Python coding job opportunities in Software Development, Data Science and AI/ML.</li>
+        </ul>
+    </div>
+    </div>
+
+    <!-- Pyodide: Python-in-the-browser runtime -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    <script>
+        let pyodide;
+
+        // Initialize Pyodide and update UI when ready
+        (async () => {
+            const status = document.getElementById('py-status');
+            try {
+                status.textContent = 'Downloading runtime…';
+                pyodide = await loadPyodide();
+                status.textContent = 'Ready';
+                document.getElementById('run-btn').disabled = false;
+            } catch (e) {
+                status.textContent = 'Failed to load';
+                console.error(e);
+            }
+        })();
+
+        // Helper: run code and capture printed output (stdout & stderr)
+        async function runPython() {
+            const output = document.getElementById('py-output');
+            const code = document.getElementById('py-code').value;
+
+            if (!pyodide) {
+                output.textContent = 'Python runtime not ready yet.';
+                return;
+            }
+
+            output.textContent = 'Running…';
+
+            try {
+                // Redirect stdout/stderr to a StringIO buffer
+                await pyodide.runPythonAsync(`
+import sys
+from io import StringIO
+_sys_stdout = sys.stdout
+_sys_stderr = sys.stderr
+sys.stdout = StringIO()
+sys.stderr = sys.stdout
+        `);
+
+                // Execute user code
+                await pyodide.runPythonAsync(code);
+
+                // Fetch everything that was printed
+                const printed = await pyodide.runPythonAsync(`sys.stdout.getvalue()`);
+
+                // Restore std streams
+                await pyodide.runPythonAsync(`
+sys.stdout = _sys_stdout
+sys.stderr = _sys_stderr
+del _sys_stdout, _sys_stderr
+        `);
+
+                output.textContent = printed || '✓ Code executed (no output).';
+            } catch (err) {
+                output.textContent = 'Error:\n' + err;
+            }
+        }
+
+        // Wire up buttons
+        document.getElementById('run-btn').addEventListener('click', runPython);
+        document.getElementById('clear-btn').addEventListener('click', () => {
+            document.getElementById('py-output').textContent = '';
+        });
+    </script>
+</body>
+
+</html>
