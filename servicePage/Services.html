@@ -1,98 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services | Codelecta</title>
-    <link rel="stylesheet" href="Services.css" />
-  </head>
 
-  <body>
-    <!-- Navbar -->
-    <nav>
-      <a href="main.html" id="logo-container">
-        <img src="Logo.png" alt="Codelecta Logo" class="logo" />
-      </a>
-      <ul class="nav-links">
-        <li><a href="main.html">Home</a></li>
-        <span class="divider"></span>
-        <li><a href="../aboutUs/aboutus.html">About Us</a></li>
-        <span class="divider"></span>
-        <li><a href="../servicePage/Services.html">Services</a></li>
-        <span class="divider"></span>
-        <li><a href="../contactPage/contact.html">Contact</a></li>
-        <span class="divider"></span>
-        <li><a href="../feedbackPage/feedback.html">Feedback</a></li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Codelecta</title>
+  <link rel="stylesheet" href="Services.css" />
+</head>
 
-    <!-- Services Section -->
-    <section class="intro">
-      <h1>Learn, Code, and Grow with Codelecta</h1>
-      <p class="desc">
-        Explore coding with our flexible plans and earn certificates along the
-        way. <br />
-        Start your journey today with a 7-day free trial!
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="main.html" id="logo-container">
+      <img src="Logo.png" alt="Codelecta Logo" class="logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="main.html">Home</a></li>
+      <span class="divider"></span>
+      <li><a href="../aboutUs/aboutus.html">About Us</a></li>
+      <span class="divider"></span>
+      <li>
+        <a href="../servicePage/Services.html" class="active">Services</a>
+      </li>
+      <span class="divider"></span>
+      <li><a href="../contactPage/contact.html">Contact</a></li>
+      <span class="divider"></span>
+      <li><a href="../feedbackPage/feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+
+  <!-- Services Section -->
+  <section class="intro">
+    <h1>Learn, Code, and Grow with Codelecta</h1>
+    <p class="desc">
+      Explore coding with our flexible plans and earn certificates along the
+      way. <br />
+      Start your journey today with a 7-day free trial!
+    </p>
+  </section>
+
+  <section id="services">
+    <!-- Free Plan -->
+    <div class="plan" id="free">
+      <h3>Beginner Coder</h3>
+      <b>FREE</b>
+      <p class="passes">
+        Get started with coding basics and enjoy our community support at no
+        cost.
       </p>
-    </section>
-
-    <section id="services">
-      <!-- Free Plan -->
-      <div class="plan" id="free">
-        <h3>Beginner Coder</h3>
-        <b>FREE</b>
-        <p class="passes">
-          Get started with coding basics and enjoy our community support at no
-          cost.
-        </p>
-        <span class="btn"><button>Start for Free</button></span>
-        <div class="features">
-          <ul>
-            <li>✔ Ideal for Beginners</li>
-            <li>✔ Basic Challenges & Projects</li>
-            <li>✔ Community Support</li>
-            <li>✔ Learn at Your Own Pace</li>
-          </ul>
-        </div>
+      <span class="btn"><a href="../paymentPage/payment.html"><button>Start for Free</button></a>
+      </span>
+      <div class="features">
+        <ul>
+          <li>✔ Ideal for Beginners</li>
+          <li>✔ Basic Challenges & Projects</li>
+          <li>✔ Community Support</li>
+          <li>✔ Learn at Your Own Pace</li>
+        </ul>
       </div>
+    </div>
 
-      <!-- Plus Plan -->
-      <div class="plan" id="plus">
-        <h3>Intermediate Coder</h3>
-        <b>$15.99 <sub>/ month</sub></b>
-        <p class="passes">
-          Unlock intermediate courses, real-world projects, and enjoy an ad-free
-          experience.
-        </p>
-        <span class="btn"><button>Upgrade to Plus</button></span>
-        <div class="features">
-          <ul>
-            <li>✔ Access to Intermediate Courses</li>
-            <li>✔ Real-World Coding Projects</li>
-            <li>✔ Ad-Free Learning</li>
-            <li>✔ Track Your Progress</li>
-          </ul>
-        </div>
+    <!-- Plus Plan -->
+    <div class="plan" id="plus">
+      <h3>Intermediate Coder</h3>
+      <b>$15.99 <sub>/ month</sub></b>
+      <p class="passes">
+        Unlock intermediate courses, real-world projects, and enjoy an ad-free
+        experience.
+      </p>
+      <span class="btn"><a href="../paymentPage/payment.html"><button>Upgrade to Plus</button></a></span>
+      <div class="features">
+        <ul>
+          <li>✔ Access to Intermediate Courses</li>
+          <li>✔ Real-World Coding Projects</li>
+          <li>✔ Ad-Free Learning</li>
+          <li>✔ Track Your Progress</li>
+        </ul>
       </div>
+    </div>
 
-      <!-- Pro Plan -->
-      <div class="plan" id="pro">
-        <h3>Professional Coder</h3>
-        <b>$35.99 <sub>/ month</sub></b>
-        <p class="passes">
-          Gain full access to all courses, earn certifications, and receive
-          1-on-1 mentorship.
-        </p>
-        <span class="btn"><button>Go Pro</button></span>
-        <div class="features">
-          <ul>
-            <li>✔ Full Access to All Courses</li>
-            <li>✔ Official Certificates of Completion</li>
-            <li>✔ Personalized Mentor Support</li>
-            <li>✔ Offline Learning & No Ads</li>
-          </ul>
-        </div>
+    <!-- Pro Plan -->
+    <div class="plan" id="pro">
+      <h3>Professional Coder</h3>
+      <b>$35.99 <sub>/ month</sub></b>
+      <p class="passes">
+        Gain full access to all courses, earn certifications, and receive
+        1-on-1 mentorship.
+      </p>
+      <span class="btn"><a href="../paymentPage/payment.html"><button>Go Pro</button></a></span>
+      <div class="features">
+        <ul>
+          <li>✔ Full Access to All Courses</li>
+          <li>✔ Official Certificates of Completion</li>
+          <li>✔ Personalized Mentor Support</li>
+          <li>✔ Offline Learning & No Ads</li>
+        </ul>
       </div>
-    </section>
-  </body>
+    </div>
+  </section>
+</body>
+
 </html>

@@ -40,10 +40,23 @@ nav #logo-container img:hover {
 nav ul {
   display: flex;
   list-style: none;
+  width: 100%;
+  justify-content: right;
+  align-items: center;
+  transition: left 0.3s ease;
 }
 
-nav ul li {
+.left-links {
+  display: flex;
+  align-items: center;
+}
+
+.right-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
   margin-left: 30px;
+  font-size: 20px;
 }
 
 nav ul li a {
@@ -52,6 +65,22 @@ nav ul li a {
   font-weight: 500;
   position: relative;
   transition: 0.3s;
+}
+
+nav ul li a.signup {
+  background: #9b30ff;
+  padding: 5px 15px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+}
+
+nav ul li a.signup:hover {
+  background: #7a1fc0;
+}
+
+nav ul li a.login {
+  color: #9b30ff;
 }
 
 nav ul li a::after {
@@ -64,12 +93,10 @@ nav ul li a::after {
   background: #9b30ff;
   transition: 0.3s;
 }
-
 nav ul li a:hover::after,
 nav ul li a.active::after {
   width: 100%;
 }
-
 nav ul li a:hover {
   color: #9b30ff;
 }
@@ -78,8 +105,45 @@ nav ul li a:hover {
   width: 1px;
   height: 20px;
   background: #555;
-  margin: 5px 0;
-  margin-left: 25px;
+  margin: 5px 10px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(20, 0, 40, 0.95);
+  }
+
+  nav ul.show {
+    left: 0;
+  }
+
+  .left-links,
+  .right-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
 
 /* Notification Bar */
