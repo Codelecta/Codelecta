@@ -14,17 +14,24 @@ body {
   scroll-behavior: smooth;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Navbar */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
-  background: #1a1a1a;
+  background: rgba(26, 26, 26, 1);  /* fully opaque at top */
   position: sticky;
   top: 0;
   z-index: 100;
   border-bottom: 2px solid #8a2be2;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  backdrop-filter: blur(0); /* no blur at top */
+  
 }
 
 nav #logo-container img {
@@ -83,7 +90,7 @@ nav ul li a:hover {
 }
 
 /* Hero Section */
-.hero {
+.intro {
   text-align: center;
   padding: 100px 20px 60px;
   background: linear-gradient(135deg, #390061, #8a2be2, #390061);
@@ -92,7 +99,7 @@ nav ul li a:hover {
   overflow: hidden;
 }
 
-.hero h1 {
+.intro h1 {
   font-size: 50px;
   margin-bottom: 20px;
   animation: fadeInDown 1s ease forwards;
@@ -103,7 +110,7 @@ nav ul li a:hover {
   opacity: 0;
 }
 
-.hero p {
+.intro p {
   font-size: 20px;
   max-width: 700px;
   margin: 0 auto;
@@ -224,7 +231,7 @@ nav ul li a:hover {
 }
 
 .mission .image img:hover {
-  transform: scale(1.05) rotate(1deg);
+  transform: scale(1.05);
   box-shadow: 0 0 30px #8a2be2;
 }
 
@@ -280,7 +287,7 @@ nav ul li a:hover {
 }
 
 .value-cards .card:hover i {
-  transform: rotate(15deg);
+  transform: scale(1.2);  
 }
 
 .value-cards .card h3 {

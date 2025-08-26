@@ -19,9 +19,9 @@
       <ul class="nav-links">
         <li><a href="main.html">Home</a></li>
         <span class="divider"></span>
-        <li><a href="services.html">Services</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
         <span class="divider"></span>
-        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
         <span class="divider"></span>
         <li><a href="contact.html">Contact</a></li>
         <span class="divider"></span>
@@ -29,8 +29,8 @@
       </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Intro Section -->
+    <section class="intro">
       <h1>Welcome to Codelecta</h1>
       <p>
         Learn, code, and grow your skills with a platform designed for coders of
@@ -39,7 +39,7 @@
     </section>
 
     <!-- Mission Section -->
-    <section class="mission scroll-reveal">
+    <section class="mission scroll-reveal" id="mission">
       <div class="image">
         <img
           src="https://images.pexels.com/photos/6147381/pexels-photo-6147381.jpeg"
@@ -66,7 +66,7 @@
     </section>
 
     <!-- Values Section -->
-    <section class="values scroll-reveal">
+    <section class="values scroll-reveal" id="values">
       <h2>Our Core Values</h2>
       <div class="value-cards">
         <div class="card">
@@ -97,7 +97,7 @@
     </section>
 
     <!-- Team Section -->
-    <section class="team scroll-reveal">
+    <section class="team scroll-reveal" id="team">
       <h2>Meet Our Team</h2>
       <p>Passionate Coders and developers driving Codelecta’s vision.</p>
       <div class="team-cards">
@@ -164,9 +164,9 @@
             <h3>About Us</h3>
             <ul>
               <li><a href="#">About Codelecta</a></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="#">Our Mission</a></li>
-              <li><a href="#">Our Values</a></li>
+              <li><a href="#team">Our Team</a></li>
+              <li><a href="#mission">Our Mission</a></li>
+              <li><a href="#values">Our Values</a></li>
               <li><a href="#">Services</a></li>
             </ul>
           </div>
@@ -177,8 +177,9 @@
               <li><a href="#">Introduction to Html</a></li>
               <li><a href="#">Programming in Python</a></li>
               <li><a href="#">React Basics</a></li>
-              <li><a href="#">Java</a></li>
-              <li><a href="#">React Basics</a></li>
+              <li><a href="#">Introduction to Java</a></li>
+              <li><a href="">Introduction to C</a></li>
+              <li><a href="#">PHP</a></li>
             </ul>
           </div>
 
@@ -248,6 +249,17 @@
       window.addEventListener("scroll", () => {
         handleScrollAnimation();
       });
+
+        window.addEventListener("scroll", function () {
+    const nav = document.querySelector("nav");
+    if (window.scrollY > 50) {
+      nav.style.background = "rgba(26, 26, 26, 0.9)"; // 10% transparent
+      nav.style.backdropFilter = "blur(10px)"; // add blur
+    } else {
+      nav.style.background = "rgba(26, 26, 26, 1)"; // opaque
+      nav.style.backdropFilter = "blur(0)"; // remove blur
+    }
+  });
     </script>
   </body>
 </html>
