@@ -1,55 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login to EduSphere</title>
-    <link rel="stylesheet" href="loginpage.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="loginpage.css" />
+  </head>
+  <body>
+    <nav>
+      <a id="logo-container" href="main.html">
+        <img src="Logo.png" alt="Logo" class="logo" />
+      </a>
+    </nav>
+    <div class="login-center">
+      <div class="login-box">
+        <h2>Welcome back</h2>
+        <form>
+          <label>Email *</label>
+          <input type="email" placeholder="name@email.com" required />
 
+          <label>Password *</label>
+          <input type="password" placeholder="Enter your password" required />
 
-<div class="login-center">
-  <div class="login-box">
-    <h2>Welcome back</h2>
-    <form>
-      <label>Email *</label>
-      <input type="email" placeholder="name@email.com" required>
-      
-      <label>Password *</label>
-      <input type="password" placeholder="Enter your password" required>
-      
-      <button type="submit">Login</button>
-        <p class="forgot-password"> <a href="Forgotpass.html">Forgot password</a></p>
-        <div class="divider">
-        <span class="divider-line"></span>
-        <span class="divider-text">OR</span>
-        <span class="divider-line"></span>
+          <button type="submit">Login</button>
+          <p class="forgot-password">
+            <a href="Forgotpass.html">Forgot password</a>
+          </p>
+          <div class="divider">
+            <span class="divider-line"></span>
+            <span class="divider-text">OR</span>
+            <span class="divider-line"></span>
+          </div>
+
+          <button type="button" class="social-btn google-btn">
+            <div class="google-img">
+              <img
+                src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                alt="Google logo"
+                style="height: 20px; vertical-align: middle"
+              />
+            </div>
+            <div class="google">Continue with Google</div>
+          </button>
+
+          <button type="button" class="social-btn facebook-btn">
+            <div class="facebook-img">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
+                alt="Facebook logo"
+                style="height: 20px; vertical-align: middle"
+              />
+            </div>
+            <div class="Facebook">Continue with Facebook</div>
+          </button>
+          <button type="button" class="social-btn apple-btn">
+            <div class="apple-img">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                alt="Apple logo"
+                style="height: 20px; vertical-align: middle"
+              />
+            </div>
+            <div class="Apple">Continue with Apple</div>
+          </button>
+          <p class="register-link">
+            Don't have an account? <a href="signup.html">Register</a>
+          </p>
+        </form>
       </div>
-      
-      <button type="button" class="social-btn google-btn">
-  <div class="google-img"><img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
-      alt="Google logo"
-      style="height: 20px; vertical-align: middle;">
-      </div>
-  <div class="google">Continue with Google</div>
-</button>
-
-      <button type="button" class="social-btn facebook-btn">
-  <div class="facebook-img"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
-      alt="Facebook logo"
-      style="height: 20px; vertical-align: middle;"></div>
-      <div class="Facebook">Continue with Facebook</div>
-</button>
-  <button type="button" class="social-btn apple-btn">
-  <div class="apple-img"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-      alt="Apple logo"
-      style="height: 20px; vertical-align: middle;"></div>
-  <div class="Apple">Continue with Apple</div>
-  </button>
-      <p class="register-link">Don't have an account? <a href="signup.html">Register</a></p>
-    </form>
-  </div>
-</div>
-</body>
+    </div>
+  </body>
 </html>
