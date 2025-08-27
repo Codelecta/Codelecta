@@ -16,6 +16,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* adjust this to your navbar height */
 }
 
 /* Hero Section */
@@ -513,4 +514,3 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
-

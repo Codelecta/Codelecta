@@ -206,3 +206,8 @@
     gap: 10px;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* adjust this to your navbar height */
+}

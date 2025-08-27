@@ -4,37 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us | Codelecta</title>
+    <meta
+      name="description"
+      content="Learn, code, and grow with Codelecta. Explore coding courses, real-world projects, and a global community of coders."
+    />
     <link rel="stylesheet" href="aboutus.css" />
-    <link rel="stylesheet" href="../navBar.css">
-    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../navBar.css" />
+    <link rel="stylesheet" href="../footer.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
   <body>
-   <!-- Navbar -->
-  <nav>
-    <a href="../homePage/home1.html" id="logo-container">
-      <img src="../Logo.png" alt="Codelecta Logo" class="logo" />
-    </a>
+    <!-- Navbar -->
+    <nav>
+      <a href="../homePage/home.html" id="logo-container">
+        <img src="../Logo.png" alt="Codelecta Logo" class="logo" />
+      </a>
       <div class="menu-toggle" id="menu-toggle">
-    <i class="fas fa-bars"></i>
-  </div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="../homePage/home1.html">Home</a></li>
-      <span class="divider"></span>
-      <li><a href="../aboutUs/aboutus.html" class="active">About Us</a></li>
-      <span class="divider"></span>
-      <li>
-        <a href="../servicePage/Services.html">Services</a>
-      </li>
-      <span class="divider"></span>
-      <li><a href="../contactPage/contact.html">Contact</a></li>
-      <span class="divider"></span>
-      <li><a href="../feedbackPage/feedback.html">Feedback</a></li>
-    </ul>
-  </nav>
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../homePage/home.html">Home</a></li>
+        <span class="divider"></span>
+        <li><a href="../aboutUs/aboutus.html" class="active">About Us</a></li>
+        <span class="divider"></span>
+        <li><a href="../servicePage/Services.html">Services</a></li>
+        <span class="divider"></span>
+        <li><a href="../contactPage/contact.html">Contact</a></li>
+        <span class="divider"></span>
+        <li><a href="../feedbackPage/feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
 
     <!-- Intro Section -->
     <section class="intro">
@@ -50,7 +52,8 @@
       <div class="image">
         <img
           src="https://images.pexels.com/photos/6147381/pexels-photo-6147381.jpeg"
-          alt="Our Mission"
+          alt="People coding together - Our Mission"
+          loading="lazy"
         />
       </div>
       <div class="content">
@@ -67,8 +70,8 @@
     <section class="cta scroll-reveal">
       <h2>Are you ready to take the next step toward your coding journey?</h2>
       <div class="cta-buttons">
-        <a href="main.html" class="btn visit-btn">Visit</a>
-        <a href="signup.html" class="btn apply-btn">Join Now</a>
+        <a href="../main.html" class="btn visit-btn">Visit</a>
+        <a href="../signup.html" class="btn apply-btn">Join Now</a>
       </div>
     </section>
 
@@ -77,7 +80,7 @@
       <h2>Our Core Values</h2>
       <div class="value-cards">
         <div class="card">
-          <i class="fas fa-lightbulb"></i>
+          <i class="fas fa-lightbulb" aria-hidden="true"></i>
           <h3>Innovation</h3>
           <p>
             We encourage creativity and provide tools to bring your coding ideas
@@ -85,7 +88,7 @@
           </p>
         </div>
         <div class="card">
-          <i class="fas fa-users"></i>
+          <i class="fas fa-users" aria-hidden="true"></i>
           <h3>Community</h3>
           <p>
             Learning is stronger together. Join our supportive global coding
@@ -93,7 +96,7 @@
           </p>
         </div>
         <div class="card">
-          <i class="fas fa-graduation-cap"></i>
+          <i class="fas fa-graduation-cap" aria-hidden="true"></i>
           <h3>Excellence</h3>
           <p>
             We deliver high-quality courses and guidance to help you reach your
@@ -109,119 +112,147 @@
       <p>Passionate Coders and developers driving Codelecta’s vision.</p>
       <div class="team-cards">
         <div class="team-card">
-          <img src="Team1.jpg" alt="Basanata Duwal" />
+          <img
+            src="Team1.jpg"
+            alt="Basanta Duwal - Founder & CEO"
+            loading="lazy"
+          />
           <h3>Basanta Duwal</h3>
           <p>Founder & CEO</p>
         </div>
         <div class="team-card">
-          <img src="Team2.jpg" alt="Lucky Rajkarnikar" />
+          <img
+            src="Team2.jpg"
+            alt="Lucky Rajkarnikar - Lead Developer"
+            loading="lazy"
+          />
           <h3>Lucky Rajkarnikar</h3>
           <p>Lead Developer</p>
         </div>
         <div class="team-card">
-          <img src="Team3.jpg" alt="Prabin Shrestha" />
+          <img
+            src="Team3.jpg"
+            alt="Prabin Shrestha - Head of Education"
+            loading="lazy"
+          />
           <h3>Prabin Shrestha</h3>
           <p>Head of Education</p>
         </div>
         <div class="team-card">
-          <img src="Team4.jpg" alt="Nikesh Karki" />
+          <img
+            src="Team4.jpg"
+            alt="Nikesh Karki - Community Manager"
+            loading="lazy"
+          />
           <h3>Nikesh Karki</h3>
           <p>Community Manager</p>
         </div>
       </div>
     </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <div class="logo-section">
-            <img class="logo-1" src="../Logo.png" alt="Codelecta Logo" />
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo-section">
+              <img class="logo-1" src="../Logo.png" alt="Codelecta Logo" />
+            </div>
+            <p class="logo-subtitle">
+              in collaboration with<br />Leading Tech Universities
+            </p>
+
+            <div class="contact-info">
+              <p><strong>Tel:</strong> 01-4541577 , 01-4525661</p>
+              <p><strong>Email:</strong> codelecta@gmail.com</p>
+              <p><strong>Address:</strong> New Baneshwor, Kathmandu</p>
+            </div>
+
+            <div class="social-links">
+              <a href="https://www.facebook.com/" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://www.instagram.com/" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.linkedin.com/" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="https://youtube.com/" aria-label="Youtube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+
+            <a href="../contactPage/contact.html" class="contact-btn"
+              >Contact Us</a
+            >
           </div>
-          <p class="logo-subtitle">
-            in collaboration with<br />Leading Tech Universities
-          </p>
 
-          <div class="contact-info">
-            <p><strong>Tel:</strong> 01-4541577 , 01-4525661</p>
-            <p><strong>Email:</strong> codelecta@gmail.com</p>
-            <p><strong>Address:</strong> New Baneshwor, Kathmandu</p>
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <ul>
+              <li><a href="../aboutUs/aboutus.html">About Codelecta</a></li>
+              <li><a href="../aboutUs/aboutus.html#team">Our Team</a></li>
+              <li><a href="../aboutUs/aboutus.html#mission">Our Mission</a></li>
+              <li><a href="../aboutUs/aboutus.html#values">Our Values</a></li>
+              <li><a href="../servicePage/Services.html">Services</a></li>
+            </ul>
           </div>
 
-          <div class="social-links">
-            <a href="https://www.facebook.com/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://youtube.com/" title="Youtube"><i class="fab fa-youtube"></i></a>
+          <div class="footer-section">
+            <h3>Courses</h3>
+            <ul>
+              <li>
+                <a href="../coursePage/Course1.html">Introduction to HTML</a>
+              </li>
+              <li>
+                <a href="../coursePage/Course2.html">Programming in Python</a>
+              </li>
+              <li><a href="../coursePage/Course3.html">React Basics</a></li>
+              <li>
+                <a href="../coursePage/Course4.html">Introduction to Java</a>
+              </li>
+              <li><a href="../coursePage/Course5.html">Programming in C</a></li>
+              <li><a href="../coursePage/Course6.html">PHP Basics</a></li>
+            </ul>
           </div>
 
-          <a href="../contactPage/contact.html" class="contact-btn">Contact Us</a>
+          <div class="footer-section">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="../contactPage/contact.html">Contact Us</a></li>
+              <li><a href="../feedbackPage/feedback.html">Feedback</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="../homePage/home.html">Home</a></li>
+              <li><a href="../coursePage/Courses.html">Courses</a></li>
+              <li><a href="../contactPage/contact.html">Contact</a></li>
+              <li><a href="../feedbackPage/feedback.html">Feedback</a></li>
+              <li><a href="../aboutUs/aboutus.html">About Us</a></li>
+              <li><a href="../servicePage/Services.html">Services</a></li>
+            </ul>
+          </div>
         </div>
 
-        <div class="footer-section">
-          <h3>About Us</h3>
-          <ul>
-            <li><a href="../aboutUs/aboutus.html">About Codelecta</a></li>
-            <li><a href="../aboutUs/aboutus.html#team">Our Team</a></li>
-            <li><a href="../aboutUs/aboutus.html#mission">Our Mission</a></li>
-            <li><a href="../aboutUs/aboutus.html#values">Our Values</a></li>
-            <li><a href="../servicePage/Services.html">Services</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h3>Courses</h3>
-          <ul>
-            <li>
-              <a href="../coursePage/Course1.html">Introduction to Html</a>
-            </li>
-            <li>
-              <a href="../coursePage/Course2.html">Programming in Python</a>
-            </li>
-            <li><a href="../coursePage/Course3.html">React Basics</a></li>
-            <li>
-              <a href="../coursePage/Course4.html">Introduction to Java</a>
-            </li>
-            <li><a href="../coursePage/Course5.html">Programming in C</a></li>
-            <li><a href="../coursePage/Course6.html">PHP Basics</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h3>Support</h3>
-          <ul>
-            <li><a href="../contactPage/contact.html">Contact Us</a></li>
-            <li><a href="../feedbackPage/feedback.html">Feedback</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="../homePage/home.html">Home</a></li>
-            <li><a href="../coursePage/Courses.html">Courses</a></li>
-            <li><a href="../contactPage/contact.html">Contact</a></li>
-            <li><a href="../feedbackPage/feedback.html">Feedback</a></li>
-            <li><a href="../aboutUs/aboutus.html">About Us</a></li>
-            <li><a href="../servicePage/Services.html">Services</a></li>
-          </ul>
+        <div class="footer-bottom">
+          <div class="copyright">Copyright © Codelecta</div>
+          <div class="footer-bottom-links">
+            <a href="../policyPage/policy.html#privacy-policy">Privacy Policy</a>
+            <span class="separator">|</span>
+            <a href="../policyPage/policy.html#terms">Terms & Conditions</a>
+          </div>
         </div>
       </div>
+    </footer>
 
-      <div class="footer-bottom">
-        <div class="copyright">Copyright © Codelecta</div>
-        <div class="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <span class="separator">|</span>
-          <a href="#">Terms & Conditions</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-    <!-- Scroll Reveal Script -->
-    <script src="../menu.js">
+    <!-- JS Scripts -->
+    <script src="../menu.js"></script>
+    <script>
+      // Scroll reveal effect
       const scrollElements = document.querySelectorAll(".scroll-reveal");
 
       const elementInView = (el, dividend = 1) => {
@@ -255,17 +286,17 @@
         handleScrollAnimation();
       });
 
-        window.addEventListener("scroll", function () {
-    const nav = document.querySelector("nav");
-    if (window.scrollY > 50) {
-      nav.style.background = "rgba(26, 26, 26, 0.9)"; // 10% transparent
-      nav.style.backdropFilter = "blur(10px)"; // add blur
-    } else {
-      nav.style.background = "rgba(26, 26, 26, 1)"; // opaque
-      nav.style.backdropFilter = "blur(0)"; // remove blur
-    }
-  });
-
+      // Navbar background change on scroll
+      window.addEventListener("scroll", function () {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 50) {
+          nav.style.background = "rgba(26, 0, 43, 0.9)"; // purple-black theme
+          nav.style.backdropFilter = "blur(10px)";
+        } else {
+          nav.style.background = "rgba(20, 0, 30, 1)";
+          nav.style.backdropFilter = "blur(0)";
+        }
+      });
     </script>
   </body>
 </html>

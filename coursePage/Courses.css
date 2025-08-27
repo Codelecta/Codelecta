@@ -1,34 +1,43 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a 90%);
+  color: #fff;
+}
+
+#container {
+  padding: 40px 20px;
+  margin-bottom: 40px;
 }
 
 /* Section Heading */
 .section-title {
-  font-size: 40px;
+  font-size: 42px;
   text-align: center;
-  min-height: 50px;
-  color: #003049;
-  font-weight: 700;
+    background: linear-gradient(90deg, #ff0080, #ff6a00, #faff00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 5px rgba(255, 143, 103, 0.5);
+  font-weight: 800;
   margin-bottom: 20px;
+  letter-spacing: 1px;
+  
 }
 
 .section-description {
   text-align: center;
-  color: #555;
+  color: #bbb;
   max-width: 700px;
   margin: 0 auto 30px auto;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* Right section */
@@ -51,21 +60,23 @@ body {
   border-radius: 25px;
   font-size: 14px;
   font-weight: 600;
-  color: white;
-  background-color: #5d6d7e;
+  color: #fff;
+  background: #6b21a8; /* Dark Purple */
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
 }
 
 .badge:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(168, 85, 247, 0.5);
 }
 
-.badge.new { background-color: #27ae60; }
-.badge.beginner { background-color: #3498db; }
-.badge.popular { background-color: #f39c12; }
+.badge.new { background-color: #22c55e; }
+.badge.beginner { background-color: #6366f1; }
+.badge.popular { background-color: #eab308; }
 
 /* Cards grid */
 .cards-container {
@@ -78,17 +89,18 @@ body {
 /* Course card */
 .course-card {
   position: relative;
-  background: #fff;
+  background: #111;
   border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.15);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(168, 85, 247, 0.2);
 }
 
 .course-card:hover {
   cursor: pointer;
   transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 35px rgba(168, 85, 247, 0.35);
 }
 
 .course-card img {
@@ -99,7 +111,7 @@ body {
 }
 
 .course-card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 /* Free trial badge */
@@ -107,13 +119,13 @@ body {
   position: absolute;
   top: 15px;
   left: 15px;
-  background-color: #00b4db;
+  background: linear-gradient(135deg, #9333ea, #a855f7);
   color: white;
   padding: 8px 18px;
   font-size: 14px;
   font-weight: bold;
   border-radius: 30px;
-  box-shadow: 0 4px 8px rgba(0, 180, 219, 0.3);
+  box-shadow: 0 4px 10px rgba(168, 85, 247, 0.4);
 }
 
 /* Course content */
@@ -122,33 +134,36 @@ body {
 }
 
 .course-content .provider {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
-  color: #00b4db;
+  color: #a855f7;
   display: block;
   margin-bottom: 8px;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .course-content h3 {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #2c3e50;
+  color: #e5e5e5;
 }
 
 .course-content .type {
   font-size: 14px;
-  color: #888;
+  color: #aaa;
 }
 
-a{
+a {
   text-decoration: none;
+  color: inherit;
 }
+
 /* Responsive */
 @media (max-width: 768px) {
   .section-title {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .badges {

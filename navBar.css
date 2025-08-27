@@ -125,3 +125,8 @@ nav ul li a:hover {
     z-index: 1000;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* adjust this to your navbar height */
+}

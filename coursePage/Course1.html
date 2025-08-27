@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduction to HTML</title>
     <!-- External CSS file for styling -->
-    <link rel="stylesheet" href="Course1.css">
-</head>
+    <link rel="stylesheet" href="Course1.css" />
+    <link rel="stylesheet" href="../footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
 
-<body>
-    <!-- Main container for all page content -->
+  <body>
     <div class="container">
+      <div class="title">
+        <h1>Introduction to HTML</h1>
+      </div>
 
-        <!-- Page title section -->
-        <div class="title">
-            <h1>Introduction to HTML</h1>
+      <div class="content">
+        <p>
+          <b>HTML</b> stands for <b>HyperText Markup Language</b>. It is the
+          standard language used to create and structure content on the web. It
+          tells the web browser how to display text, links, images, and other
+          forms of multimedia on a webpage. HTML sets up the basic structure of
+          a website, and then CSS and JavaScript add style and interactivity to
+          make it look and function better.
+        </p>
+      </div>
+
+      <div class="content">
+        <p>
+          <b>'Hello World'</b> Page in HTML<br />
+          To show you how fun and easy HTML is, we have provided a classic
+          example of writing <b>"Hello, World!"</b> in HTML
+        </p>
+      </div>
+
+      <div class="editor-box">
+        <div class="toolbar">
+          <button onclick="clearCode()">❌</button>
+          <button onclick="runCode()">▶️</button>
+          <button onclick="copyCode()">📋</button>
         </div>
 
-        <!-- Content section explaining what HTML is -->
-        <div class="content">
-            <p><b>HTML</b> stands for <b>HyperText Markup Language</b>.
-                It is the standard language used to create and structure content on the web.
-                It tells the web browser how to display text, links, images, and other forms of multimedia on a webpage.
-                HTML sets up the basic structure of a website, and then CSS and JavaScript add style and interactivity
-                to make it look and function better.</p>
-        </div>
-
-        <!-- Introduction to Hello World example -->
-        <div class="content">
-            <p><b>'Hello World'</b> Page in HTML<br>
-                To show you how fun and easy HTML is, we have provided a classic example of writing <b>"Hello,
-                    World!"</b> in
-                HTML</p>
-        </div>
-
-        <!-- Editor section with code box and preview -->
-        <div class="editor-box">
-
-            <!-- Toolbar with buttons for clearing, running, and copying code -->
-            <div class="toolbar">
-                <button onclick="clearCode()">❌</button> <!-- Clear the code -->
-                <button onclick="runCode()">▶️</button> <!-- Run the code and show output -->
-                <button onclick="copyCode()">📋</button> <!-- Copy code to clipboard -->
-            </div>
-
-            <!-- Textarea to write or edit HTML code -->
-            <textarea id="codeArea" rows="10" cols="50">
+        <textarea id="codeArea" rows="10" cols="50">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -56,53 +55,164 @@
     &lt;p&gt;Hello World&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-            </textarea>
+            </textarea
+        >
 
-            <!-- Iframe to display the output/result of the HTML code -->
-            <iframe id="preview"></iframe>
+        <iframe id="preview"></iframe>
+      </div>
 
-            <!-- Importance of HTML -->
-        </div>
-        <div class="content">
-            <h3> Why Learn HTML?</h3>
-            <p>Learning HTML is essential for various practical reasons:</p>
-            <ul>
-                <li><b>Foundation of Web Development:</b>
-                    HTML is the starting point for creating websites. Understanding HTML is crucial for any web
-                    development or web design role.</li>
-                <li><b> Universal Language of the Web:</b>
-                    HTML is the standard markup language used to create the structure of web pages. Knowledge of HTML is
-                    necessary to manage any content on the Internet.</li>
-                <li><b> Easy to learn:</b>
-                    HTML is straightforward compared to programming languages. Beginners can quickly learn how to create
-                    basic websites with just HTML</li>
-                </ul>
-        </div>
+      <div class="content">
+        <h3>Why Learn HTML?</h3>
+        <p>Learning HTML is essential for various practical reasons:</p>
+        <ul>
+          <li>
+            <b>Foundation of Web Development:</b> HTML is the starting point for
+            creating websites. Understanding HTML is crucial for any web
+            development or web design role.
+          </li>
+          <li>
+            <b> Universal Language of the Web:</b> HTML is the standard markup
+            language used to create the structure of web pages. Knowledge of
+            HTML is necessary to manage any content on the Internet.
+          </li>
+          <li>
+            <b> Easy to learn:</b> HTML is straightforward compared to
+            programming languages. Beginners can quickly learn how to create
+            basic websites with just HTML
+          </li>
+        </ul>
+      </div>
 
-        <!-- JavaScript functions for button functionality -->
-        <script>
-            // This function runs the code in the textarea and displays it in the iframe
-            function runCode() {
-                const code = document.getElementById("codeArea").value;
-                document.getElementById("preview").srcdoc = code;
-            }
+      <script>
+        // Run code and set white text in the preview iframe
+        function runCode() {
+          const code = document.getElementById("codeArea").value;
+          const styledCode = `
+                    <style>
+                        body { 
+                            background-color: #1a1a1a; 
+                            color: white; 
+                            font-family: 'Segoe UI', sans-serif; 
+                            padding: 10px;
+                        }
+                    </style>
+                    ${code}
+                `;
+          document.getElementById("preview").srcdoc = styledCode;
+        }
 
-            // This function clears both the textarea and the preview
-            function clearCode() {
-                document.getElementById("codeArea").value = "";
-                document.getElementById("preview").srcdoc = "";
-            }
+        function clearCode() {
+          document.getElementById("codeArea").value = "";
+          document.getElementById("preview").srcdoc = "";
+        }
 
-            // This function copies the code in the textarea to the clipboard
-            function copyCode() {
-                const codeArea = document.getElementById("codeArea");
-                codeArea.select();
-                document.execCommand("copy");
-                alert("Code copied to clipboard!");
-            }
-        </script>
+        function copyCode() {
+          const codeArea = document.getElementById("codeArea");
+          codeArea.select();
+          document.execCommand("copy");
+          alert("Code copied to clipboard!");
+        }
+      </script>
     </div>
+        <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo-section">
+              <img class="logo-1" src="../Logo.png" alt="Codelecta Logo" />
+            </div>
+            <p class="logo-subtitle">
+              in collaboration with<br />Leading Tech Universities
+            </p>
 
-</body>
+            <div class="contact-info">
+              <p><strong>Tel:</strong> 01-4541577 , 01-4525661</p>
+              <p><strong>Email:</strong> codelecta@gmail.com</p>
+              <p><strong>Address:</strong> New Baneshwor, Kathmandu</p>
+            </div>
 
+            <div class="social-links">
+              <a href="https://www.facebook.com/" title="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://www.instagram.com/" title="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.linkedin.com/" title="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="https://youtube.com/" title="Youtube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+
+            <a href="../contactPage/contact.html" class="contact-btn"
+              >Contact Us</a
+            >
+          </div>
+
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <ul>
+              <li><a href="../aboutUs/aboutus.html">About Codelecta</a></li>
+              <li><a href="../aboutUs/aboutus.html#team">Our Team</a></li>
+              <li><a href="../aboutUs/aboutus.html#mission">Our Mission</a></li>
+              <li><a href="../aboutUs/aboutus.html#values">Our Values</a></li>
+              <li><a href="../servicePage/Services.html">Services</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Courses</h3>
+            <ul>
+              <li>
+                <a href="../coursePage/Course1.html">Introduction to Html</a>
+              </li>
+              <li>
+                <a href="../coursePage/Course2.html">Programming in Python</a>
+              </li>
+              <li><a href="../coursePage/Course3.html">React Basics</a></li>
+              <li>
+                <a href="../coursePage/Course4.html">Introduction to Java</a>
+              </li>
+              <li><a href="../coursePage/Course5.html">Programming in C</a></li>
+              <li><a href="../coursePage/Course6.html">PHP Basics</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="../contactPage/contact.html">Contact Us</a></li>
+              <li><a href="../feedbackPage/feedback.html">Feedback</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="../homePage/main.html">Home</a></li>
+              <li><a href="../coursePage/Courses.html">Courses</a></li>
+              <li><a href="../contactPage/contact.html">Contact</a></li>
+              <li><a href="../feedbackPage/feedback.html">Feedback</a></li>
+              <li><a href="../aboutUs/aboutus.html">About Us</a></li>
+              <li><a href="../servicePage/Services.html">Services</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="copyright">Copyright © Codelecta</div>
+          <div class="footer-bottom-links">
+            <a href="../policyPage/policy.html#privacy-policy"
+              >Privacy Policy</a
+            >
+            <span class="separator">|</span>
+            <a href="../policyPage/policy.html#terms">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

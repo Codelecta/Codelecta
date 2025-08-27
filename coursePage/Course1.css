@@ -1,77 +1,136 @@
-/* Style for the entire page */
-body {
-    font-family: "Segoe UI", sans-serif;
-    background-color: #f4f7fa;
-    color: #1c1c1c;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* Main wrapper for all content */
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top, #1a1a1a, #0a0a0a 90%);
+    color: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
 .container {
     max-width: 1200px;
+    width: 100%;
     padding: 20px;
 }
 
-/* Title section at the top */
+/* Title */
 .title {
-    border-bottom: grey solid 1px;
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    color: #c084fc; /* soft purple */
+    border-bottom: 2px solid rgba(192, 132, 252, 0.4);
+    padding-bottom: 12px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 12px rgba(192, 132, 252, 0.6);
 }
 
-/* General content text blocks */
+/* Paragraph content */
 .content {
-    font-size: 25px;
+    font-size: 20px;
     text-align: justify;
+    color: #d1d1d1;
+    margin-bottom: 25px;
+    line-height: 1.7;
 }
 
-/* Box for the code editor and output preview */
+.content ul {
+    margin-bottom: 30px;
+}
+
+.content p {
+    color: white
+}
+
+/* Code editor wrapper */
 .editor-box {
     width: 90%;
-    max-width: 800px;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    max-width: 850px;
+    background: rgba(17, 17, 17, 0.95);
+    border: 1px solid rgba(192, 132, 252, 0.25);
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 30px rgba(192, 132, 252, 0.25),
+                inset 0 0 25px rgba(192, 132, 252, 0.1);
     margin: 50px auto;
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Toolbar containing control buttons */
+.editor-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(192, 132, 252, 0.4),
+                inset 0 0 35px rgba(192, 132, 252, 0.15);
+}
+
+/* Toolbar */
 .toolbar {
-    background: #f0f0f0;
-    padding: 5px 10px;
-    text-align: right;
+    background: linear-gradient(90deg, #111, #1f1f1f);
+    padding: 8px 14px;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid rgba(192, 132, 252, 0.25);
 }
 
-/* Buttons inside the toolbar */
+/* Toolbar Buttons */
 .toolbar button {
-    font-size: 16px;
-    margin-left: 8px;
+    font-size: 15px;
+    margin-left: 12px;
     cursor: pointer;
     border: none;
-    background: none;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #9333ea, #c084fc);
+    transition: all 0.25s ease;
+    box-shadow: 0 0 12px rgba(192, 132, 252, 0.35);
 }
 
-/* Textarea for writing HTML code */
+.toolbar button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 18px rgba(192, 132, 252, 0.6);
+}
+
+/* Textarea */
 textarea {
     width: 100%;
-    height: 220px;
+    height: 240px;
     border: none;
-    padding: 10px;
-    font-size: 14px;
-    line-height: 1.5;
-    font-family: monospace;
+    padding: 14px;
+    font-size: 15px;
+    line-height: 1.6;
+    font-family: "Fira Code", monospace;
     outline: none;
     resize: none;
-    background: #fafafa;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    background: #0f0f0f;
+    color: #e5e5e5;
+    border-top: 1px solid rgba(192, 132, 252, 0.2);
+    border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+    transition: background 0.3s ease;
 }
 
-/* Iframe for showing the live HTML output */
+textarea:focus {
+    background: #111;
+    box-shadow: inset 0 0 15px rgba(192, 132, 252, 0.25);
+}
+
+/* Live Output Frame */
 iframe {
     width: 100%;
-    height: 200px;
+    height: 240px;
     border: none;
+    background: #1a1a1a;
+    border-top: 1px solid rgba(192, 132, 252, 0.25);
 }

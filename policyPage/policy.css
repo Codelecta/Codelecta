@@ -1,0 +1,139 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #050505, #0d0d0d 85%);
+  color: #f3f4f6;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.top {
+  background: rgba(10, 10, 15, 0.95);
+  padding: 14px 12%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  border-bottom: 1px solid rgba(124, 43, 255, 0.2);
+  margin-bottom: 0px;
+}
+
+.top a {
+  color: #f9fafb;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.top a:hover {
+  background: #7c2bff;
+  color: #fff;
+  box-shadow: 0 0 15px #7c2bff;
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Main */
+main {
+  padding: 50px 12%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+section {
+  margin-bottom: 70px;
+  animation: fadeUp 1.2s ease-in-out;
+}
+
+h2 {
+  color: #a855f7;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 12px rgba(124, 43, 255, 0.6);
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #7c2bff, #a855f7);
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+p {
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+  color: #d1d5db;
+}
+
+#privacy-policy ul {
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+#privacy-policy li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  list-style-type: none;
+  position: relative;
+  padding-left: 25px;
+}
+
+#privacy-policy li::before {
+  content: "⚡";
+  color: #7c2bff;
+  position: absolute;
+  left: 0;
+  font-size: 1.1rem;
+  text-shadow: 0 0 8px #7c2bff;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  background: linear-gradient(135deg, #7c2bff, #9333ea);
+  color: #fff;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(124, 43, 255, 0.6);
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #9333ea, #7c2bff);
+  box-shadow: 0 0 20px #9333ea;
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-padding-top: 100px; /* adjust this to your navbar height */
+}

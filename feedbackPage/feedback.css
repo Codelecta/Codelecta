@@ -11,35 +11,6 @@ body {
   color: #fff;
 }
 
-/* Navbar */
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(90deg, #4b0082, #2e004f);
-  padding: 20px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-  height: 85px;
-}
-
-#logo-container {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  transition: transform 0.3s ease-in-out;
-}
-
-#logo-container:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-}
-
-.logo {
-  width: 90px;
-  height: auto;
-  object-fit: contain;
-}
-
 /* Form container */
 section {
   display: flex;
