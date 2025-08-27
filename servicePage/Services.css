@@ -16,12 +16,16 @@ body {
 /* Title + Description */
 h1 {
   margin-top: 60px;
-  text-shadow: 0 0 12px #a020f0, 0 0 24px #ba55d3, 0 0 36px #da70d6;
   font-size: 2.4em;
   text-align: center;
-  color: #fff;
+      background: linear-gradient(90deg, #ff0080, #ff6a00, #faff00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 5px rgba(255, 143, 103, 0.5);
   font-weight: bold;
   letter-spacing: 1px;
+      animation: fadeIn 0.6s ease-in-out;
 }
 
 .desc {
@@ -30,6 +34,7 @@ h1 {
   text-align: center;
   margin-top: 15px;
   color: #ccc;
+      animation: fadeIn 0.6s ease-in-out;
 }
 
 /* Services Section */
@@ -41,7 +46,7 @@ h1 {
   padding: 0 20px;
   flex-wrap: wrap;
   margin-bottom: 5rem;
-    animation: fadeIn 0.6s ease-in-out;
+      animation: fadeIn 0.6s ease-in-out;
 }
 
 /* Card Common Styles */

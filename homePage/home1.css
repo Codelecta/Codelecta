@@ -1,0 +1,271 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #0a0a0a; /* black background */
+  color: #e0e0e0; /* light text */
+}
+
+/* Notification Bar */
+.notification-bar {
+  background-color: #1a001f;
+  font-size: 16px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #e0e0e0;
+}
+
+.notification-bar a {
+  margin-left: 5px;
+  color: #b266ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.notification-bar a:hover {
+  text-decoration: underline;
+}
+
+.close-btn {
+  position: absolute;
+  right: 25px;
+  font-size: 30px;
+  color: #b266ff;
+  cursor: pointer;
+  background: transparent;
+  margin-left: 20px;
+  padding: 0 10px;
+  border: none;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #8000ff;
+  background-color: #1a001f;
+}
+
+/* Hero Section */
+.container-1 {
+  background-image: url("Bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #e0e0e0;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.container-1 h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 50px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(155, 48, 255, 0.5);
+    background: linear-gradient(90deg, #ff0080, #ff6a00, #faff00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container-1 p {
+  font-size: 20px;
+  margin: 10px;
+}
+
+/* Neon Button */
+.btn,
+.neon-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #9b30ff;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px #9b30ff, 0 0 10px #9b30ff, 0 0 20px #9b30ff;
+  transition: all 0.3s ease;
+}
+
+.btn:hover,
+.neon-btn:hover {
+  background-color: #6e00b3;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 10px #9b30ff, 0 0 20px #9b30ff, 0 0 40px #9b30ff;
+}
+
+/* Container 2 */
+.container-2 {
+  background-color: #1a001f;
+  margin: 40px 60px;
+  border-radius: 16px;
+  padding: 60px 30px;
+  text-align: center;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.container-2 h2 {
+  font-size: 40px;
+  min-height: 50px;
+  color: #d8b0ff;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.container-2 p {
+  font-size: 20px;
+  margin: 30px;
+  color: #ccc;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Main Section */
+#container-3 {
+  padding: 60px 20px;
+  padding-bottom: 100px;
+  background-color: #0a0a0a;
+}
+
+/* Section Heading */
+.section-title {
+  font-size: 40px;
+  text-align: center;
+  min-height: 50px;
+  color: #d8b0ff;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  text-align: center;
+  color: #aaa;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Badges */
+.badges {
+  margin-bottom: 40px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background-color: #5d00b3;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+}
+
+.badge.new {
+  background-color: #9b30ff;
+}
+.badge.beginner {
+  background-color: #7f00ff;
+}
+.badge.popular {
+  background-color: #d580ff;
+}
+
+/* Cards */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.course-card {
+  position: relative;
+  background: #1a001f;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  cursor: pointer;
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(155, 48, 255, 0.6);
+}
+
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Free Trial Badge */
+.trial-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #9b30ff;
+  color: white;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(155, 48, 255, 0.3);
+}
+
+/* Course Content */
+.course-content {
+  padding: 20px;
+}
+
+.course-content .provider {
+  font-size: 16px;
+  font-weight: bold;
+  color: #d580ff;
+  display: block;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.course-content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.course-content .type {
+  font-size: 14px;
+  color: #aaa;
+}

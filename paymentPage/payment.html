@@ -1,173 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payment | Codelecta</title>
-    <link rel="stylesheet" href="payment.css">
-    <link rel="stylesheet" href="../footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-</head>
-<body>
-        <!-- Navbar -->
+    <link rel="stylesheet" href="payment.css" />
+    <link rel="stylesheet" href="../footer.css" />
+    <link rel="stylesheet" href="../navbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
     <nav>
       <a href="../homePage/home.html" id="logo-container">
         <img src="../Logo.png" alt="Codelecta Logo" class="logo" />
       </a>
-      <ul class="nav-links">
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="nav-links">
         <li><a href="../homePage/home.html">Home</a></li>
         <span class="divider"></span>
-                <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="../aboutUs/aboutus.html">About Us</a></li>
         <span class="divider"></span>
-        <li><a href="services.html">Services</a></li>
+        <li>
+          <a href="../servicePage/Services.html">Services</a>
+        </li>
         <span class="divider"></span>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="../contactPage/contact.html">Contact</a></li>
         <span class="divider"></span>
-        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="../feedbackPage/feedback.html">Feedback</a></li>
       </ul>
     </nav>
     <div class="container">
-        <div class="checkout-section">
-            <header>
-                <h1>Checkout</h1>
-                <p>All fields are required</p>
-            </header>
-            <main>
-                <section class="billing-info">
-                    <h2>Billing Information</h2>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" placeholder="Enter your full name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="country">Country</label>
-                            <select id="country" required>
-                                <option value="" disabled selected>Select your country</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <!-- Add more countries as needed -->
-                            </select>
-                        </div>
-                        <div class="card-details">
-                            <div class="card-details-header">
-                                <h3>Pay with Card</h3>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png" alt="Visa Logo">
-                            </div>
-                            <div class="card-inputs">
-                                <div class="form-group full-width">
-                                    <label for="card-number">Card Number</label>
-                                    <input type="text" id="card-number" placeholder="Enter your card number" required>
-                                </div>
-                                <div class="form-group half-width">
-                                    <label for="expiry-date">Expiry Date</label>
-                                    <input type="text" id="expiry-date" placeholder="MM / YY" required>
-                                </div>
-                                <div class="form-group half-width">
-                                    <label for="cvc">CVC</label>
-                                    <input type="text" id="cvc" placeholder="123" required>
-                                </div>
-                            </div>
-                            <p class="terms-text">By providing your card information, you allow us to charge your card according to our terms.</p>
-                        </div>
-                        <button type="submit" class="submit-button">Start Free Trial</button>
-                    </form>
-                </section>
-            </main>
-        </div>
-        <aside class="summary-section">
-            <h2>Subscription Summary</h2>
-            <p>You're signing up for a <strong>7-day free trial</strong>. You won't be charged until it ends.</p>
-            <p class="cancel-info">Cancel anytime before <strong>September 3, 2025</strong>.</p>
-        </aside>
+      <div class="checkout-section">
+        <header>
+          <h1>Checkout</h1>
+          <p>All fields are required</p>
+        </header>
+        <main>
+          <section class="billing-info">
+            <h2>Billing Information</h2>
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" required>
+                  <option value="" disabled selected>
+                    Select your country
+                  </option>
+                  <option value="NP">Nepal</option>
+                  <option value="IN">India</option>
+                  <option value="CN">China</option>
+                  <option value="JP">Japan</option>
+                  <option value="KR">South Korea</option>
+                  <option value="PK">Pakistan</option>
+                  <option value="BD">Bangladesh</option>
+                  <option value="LK">Sri Lanka</option>
+                  <option value="TH">Thailand</option>
+                  <option value="VN">Vietnam</option>
+                  <option value="MY">Malaysia</option>
+                  <option value="SG">Singapore</option>
+                  <option value="ID">Indonesia</option>
+                  <option value="PH">Philippines</option>
+                  <option value="MM">Myanmar</option>
+                  <option value="KH">Cambodia</option>
+                  <option value="LA">Laos</option>
+                  <option value="MN">Mongolia</option>
+                  <option value="AF">Afghanistan</option>
+                  <option value="IR">Iran</option>
+                  <option value="IQ">Iraq</option>
+                  <option value="SA">Saudi Arabia</option>
+                  <option value="AE">United Arab Emirates</option>
+                  <option value="TR">Turkey</option>
+                  <option value="IL">Israel</option>
+                  <option value="QA">Qatar</option>
+                  <option value="KW">Kuwait</option>
+                  <option value="OM">Oman</option>
+                  <option value="JO">Jordan</option>
+                  <option value="LB">Lebanon</option>
+                  <option value="SY">Syria</option>
+                  <option value="YE">Yemen</option>
+                  <option value="US">United States</option>
+                  <option value="CA">Canada</option>
+                  <option value="GB">United Kingdom</option>
+                </select>
+              </div>
+              <div class="card-details">
+                <div class="card-details-header">
+                  <h3>Pay with Card</h3>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png"
+                    alt="Visa Logo"
+                  />
+                </div>
+                <div class="card-inputs">
+                  <div class="form-group full-width">
+                    <label for="card-number">Card Number</label>
+                    <input
+                      type="text"
+                      id="card-number"
+                      placeholder="Enter your card number"
+                      required
+                    />
+                  </div>
+                  <div class="form-group half-width">
+                    <label for="expiry-date">Expiry Date</label>
+                    <input
+                      type="text"
+                      id="expiry-date"
+                      placeholder="MM / YY"
+                      required
+                    />
+                  </div>
+                  <div class="form-group half-width">
+                    <label for="cvc">CVC</label>
+                    <input type="text" id="cvc" placeholder="123" required />
+                  </div>
+                </div>
+                <p class="terms-text">
+                  By providing your card information, you allow us to charge
+                  your card according to our terms.
+                </p>
+              </div>
+              <button type="submit" class="submit-button">
+                <a href="../homePage/home1.html">Start Free Trial</a>
+              </button>
+            </form>
+          </section>
+        </main>
+      </div>
+      <aside class="summary-section">
+        <h2>Subscription Summary</h2>
+        <p>
+          You're signing up for a <strong>* day free trial</strong>. You won't
+          be charged until it ends.
+        </p>
+        <p class="cancel-info">
+          Cancel anytime before <strong>September 5, 2025</strong>.
+        </p>
+      </aside>
     </div>
-          <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <div class="logo-section">
-            <img class="logo-1" src="Logo.png" alt="Codelecta Logo" />
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo-section">
+              <img class="logo-1" src="../Logo.png" alt="Codelecta Logo" />
+            </div>
+            <p class="logo-subtitle">
+              in collaboration with<br />Leading Tech Universities
+            </p>
+
+            <div class="contact-info">
+              <p><strong>Tel:</strong> 01-4541577 , 01-4525661</p>
+              <p><strong>Email:</strong> codelecta@gmail.com</p>
+              <p><strong>Address:</strong> New Baneshwor, Kathmandu</p>
+            </div>
+
+            <div class="social-links">
+              <a href="https://www.facebook.com/" title="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://www.instagram.com/" title="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.linkedin.com/" title="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="https://youtube.com/" title="Youtube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+
+            <a href="../contactPage/contact.html" class="contact-btn"
+              >Contact Us</a
+            >
           </div>
-          <p class="logo-subtitle">
-            in collaboration with<br />Leading Tech Universities
-          </p>
 
-          <div class="contact-info">
-            <p><strong>Tel:</strong> 01-4541577 , 01-4525661</p>
-            <p><strong>Email:</strong> codelecta@gmail.com</p>
-            <p><strong>Address:</strong> New Baneshwor, Kathmandu</p>
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <ul>
+              <li><a href="../aboutUs/aboutus.html">About Codelecta</a></li>
+              <li><a href="../aboutUs/aboutus.html#team">Our Team</a></li>
+              <li><a href="../aboutUs/aboutus.html#mission">Our Mission</a></li>
+              <li><a href="../aboutUs/aboutus.html#values">Our Values</a></li>
+              <li><a href="../servicePage/Services.html">Services</a></li>
+            </ul>
           </div>
 
-          <div class="social-links">
-            <a href="https://www.facebook.com/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://youtube.com/" title="Youtube"><i class="fab fa-youtube"></i></a>
+          <div class="footer-section">
+            <h3>Courses</h3>
+            <ul>
+              <li>
+                <a href="../coursePage/Course1.html">Introduction to Html</a>
+              </li>
+              <li>
+                <a href="../coursePage/Course2.html">Programming in Python</a>
+              </li>
+              <li><a href="../coursePage/Course3.html">React Basics</a></li>
+              <li>
+                <a href="../coursePage/Course4.html">Introduction to Java</a>
+              </li>
+              <li><a href="../coursePage/Course5.html">Programming in C</a></li>
+              <li><a href="../coursePage/Course6.html">PHP Basics</a></li>
+            </ul>
           </div>
 
-          <a href="../contactPage/contact.html" class="contact-btn">Contact Us</a>
+          <div class="footer-section">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="../contactPage/contact.html">Contact Us</a></li>
+              <li><a href="../feedbackPage/feedback.html">Feedback</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="../homePage/home.html">Home</a></li>
+              <li><a href="../coursePage/Courses.html">Courses</a></li>
+              <li><a href="../contactPage/contact.html">Contact</a></li>
+              <li><a href="../feedbackPage/feedback.html">Feedback</a></li>
+              <li><a href="../aboutUs/aboutus.html">About Us</a></li>
+              <li><a href="../servicePage/Services.html">Services</a></li>
+            </ul>
+          </div>
         </div>
 
-        <div class="footer-section">
-          <h3>About Us</h3>
-          <ul>
-            <li><a href="../aboutUs/aboutus.html">About Codelecta</a></li>
-            <li><a href="../aboutUs/aboutus.html#team">Our Team</a></li>
-            <li><a href="../aboutUs/aboutus.html#mission">Our Mission</a></li>
-            <li><a href="../aboutUs/aboutus.html#values">Our Values</a></li>
-            <li><a href="../servicePage/Services.html">Services</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h3>Courses</h3>
-          <ul>
-            <li>
-              <a href="../coursePage/Course1.html">Introduction to Html</a>
-            </li>
-            <li>
-              <a href="../coursePage/Course2.html">Programming in Python</a>
-            </li>
-            <li><a href="../coursePage/Course3.html">React Basics</a></li>
-            <li>
-              <a href="../coursePage/Course4.html">Introduction to Java</a>
-            </li>
-            <li><a href="../coursePage/Course5.html">Programming in C</a></li>
-            <li><a href="../coursePage/Course6.html">PHP Basics</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h3>Support</h3>
-          <ul>
-            <li><a href="../contactPage/contact.html">Contact Us</a></li>
-            <li><a href="../feedbackPage/feedback.html">Feedback</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="../homePage/main.html">Home</a></li>
-            <li><a href="../coursePage/Courses.html">Courses</a></li>
-            <li><a href="../contactPage/contact.html">Contact</a></li>
-            <li><a href="../feedbackPage/feedback.html">Feedback</a></li>
-            <li><a href="../aboutUs/aboutus.html">About Us</a></li>
-            <li><a href="../servicePage/Services.html">Services</a></li>
-          </ul>
+        <div class="footer-bottom">
+          <div class="copyright">Copyright © Codelecta</div>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <span class="separator">|</span>
+            <a href="#">Terms & Conditions</a>
+          </div>
         </div>
       </div>
-
-      <div class="footer-bottom">
-        <div class="copyright">Copyright © Codelecta</div>
-        <div class="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <span class="separator">|</span>
-          <a href="#">Terms & Conditions</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>

@@ -17,23 +17,28 @@
   </head>
 
   <body>
-    <!-- Navbar -->
-    <nav>
-      <a href="../homePage/home.html" id="logo-container">
-        <img src="../Logo.png" alt="Codelecta Logo" class="logo" />
-      </a>
-      <ul class="nav-links">
-        <li><a href="../homePage/home.html">Home</a></li>
-        <span class="divider"></span>
-                <li><a href="about.html" class="active">About Us</a></li>
-        <span class="divider"></span>
-        <li><a href="services.html">Services</a></li>
-        <span class="divider"></span>
-        <li><a href="contact.html">Contact</a></li>
-        <span class="divider"></span>
-        <li><a href="feedback.html">Feedback</a></li>
-      </ul>
-    </nav>
+   <!-- Navbar -->
+  <nav>
+    <a href="../homePage/home1.html" id="logo-container">
+      <img src="../Logo.png" alt="Codelecta Logo" class="logo" />
+    </a>
+      <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../homePage/home1.html">Home</a></li>
+      <span class="divider"></span>
+      <li><a href="../aboutUs/aboutus.html">About Us</a></li>
+      <span class="divider"></span>
+      <li>
+        <a href="../servicePage/Services.html">Services</a>
+      </li>
+      <span class="divider"></span>
+      <li><a href="../contactPage/contact.html" class="active">Contact</a></li>
+      <span class="divider"></span>
+      <li><a href="../feedbackPage/feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
 
     <h1>Contact Us</h1>
 
@@ -232,7 +237,7 @@
         <div class="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="../homePage/main.html">Home</a></li>
+            <li><a href="../homePage/home.html">Home</a></li>
             <li><a href="../coursePage/Courses.html">Courses</a></li>
             <li><a href="../contactPage/contact.html">Contact</a></li>
             <li><a href="../feedbackPage/feedback.html">Feedback</a></li>
@@ -252,7 +257,7 @@
       </div>
     </div>
   </footer>
-    <script>
+    <script src="../menu.js">
       // Simple Feedback Form JavaScript
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("feedbackForm");

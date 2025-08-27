@@ -62,6 +62,12 @@ body {
   transition: border 0.3s, box-shadow 0.3s;
 }
 
+.signup-box a{
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
 .signup-box input:focus {
   border: 1px solid #8b5cf6;
   box-shadow: 0 0 8px rgba(139, 92, 246, 0.6);
