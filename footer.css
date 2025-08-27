@@ -193,6 +193,18 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .footer-container {
+    margin: 10px 20px;
+    padding: 0 10px;
+  }
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
   .section-title {
     font-size: 24px;
   }
@@ -204,6 +216,30 @@
   }
   .badges {
     gap: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-container {
+    margin: 10px 20px;
+    padding: 0 10px;
+  }
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  .section-title {
+    font-size: 20px;
+  }
+  .course-content h3 {
+    font-size: 16px;
+  }
+  .course-content .provider {
+    font-size: 12px;
   }
 }
 
