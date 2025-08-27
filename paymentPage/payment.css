@@ -1,209 +1,157 @@
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+/* General Reset */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f5f8;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-  padding: 2rem;
   box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+  background: #f7f7f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Layout */
 .container {
   display: flex;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 1000px;
-  width: 100%;
-  overflow: hidden;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 3rem 5%;
+}
+
+.checkout-section,
+.summary-section {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .checkout-section {
   flex: 2;
-  padding: 2rem;
 }
 
-.checkout-section h1 {
+.summary-section {
+  flex: 1;
+  align-self: flex-start;
+}
+
+/* Headings */
+header h1 {
   font-size: 2rem;
-  font-weight: 700;
-  color: #1a202c;
   margin-bottom: 0.5rem;
 }
 
-.checkout-section p {
-  color: #6c7380;
+header p {
+  color: #666;
   margin-bottom: 2rem;
 }
 
-.billing-info h2 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #1a202c;
-  margin-bottom: 1.5rem;
+h2, h3 {
+  margin-bottom: 1rem;
+  color: #333;
 }
 
+/* Form */
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 0.5rem;
-  font-size: 0.875rem;
-  color: #4a5568;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
 }
 
 .form-group input,
 .form-group select {
   width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   font-size: 1rem;
-  color: #2d3748;
-  box-sizing: border-box;
-  transition: border-color 0.2s;
+  transition: border 0.2s ease;
 }
 
 .form-group input:focus,
 .form-group select:focus {
+  border-color: #6c63ff;
   outline: none;
-  border-color: #4c51bf;
-  box-shadow: 0 0 0 2px rgba(76, 81, 191, 0.25);
-}
-
-.card-details {
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 1.5rem;
-  background-color: #eff3fe;
-  border-color: #d1daff;
 }
 
 .card-details-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
-}
-
-.card-details-header h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1a202c;
-  margin: 0;
-  display: flex;
-  align-items: center;
+  margin: 1.5rem 0 1rem;
 }
 
 .card-details-header img {
-  height: 20px;
+  height: 28px;
 }
 
 .card-inputs {
   display: flex;
-  gap: 1rem;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.card-inputs .form-group {
-  flex: 1;
-  min-width: 45%;
-}
-
-.card-inputs .form-group.full-width {
+.full-width {
   flex: 100%;
 }
 
-.card-inputs .form-group.half-width {
-  flex: 1;
-}
-
-.card-inputs .form-group.half-width:first-child {
-  min-width: calc(50% - 0.5rem);
-}
-
-.card-inputs .form-group.half-width:last-child {
-  min-width: calc(50% - 0.5rem);
+.half-width {
+  flex: calc(50% - 0.5rem);
 }
 
 .terms-text {
-  font-size: 0.875rem;
-  color: #6c7380;
-  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #555;
+  margin: 1rem 0;
 }
 
-.terms-text a {
-  color: #4c51bf;
-  text-decoration: none;
-}
-
+/* Button */
 .submit-button {
   width: 100%;
   padding: 1rem;
-  background-color: #4c51bf;
+  background: #6c63ff;
   color: #fff;
   border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 500;
+  border-radius: 8px;
+  font-size: 1.1rem;
   cursor: pointer;
-  margin-top: 2rem;
-  transition: background-color 0.2s;
+  transition: background 0.3s ease;
 }
 
 .submit-button:hover {
-  background-color: #3b3f9b;
+  background: #5849d4;
 }
 
-.summary-section {
-  flex: 1;
-  background-color: #f7fafc;
-  padding: 2rem;
-  border-left: 1px solid #e2e8f0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
+/* Summary Section */
 .summary-section h2 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #1a202c;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
 }
 
 .summary-section p {
-  font-size: 1rem;
-  color: #4a5568;
   margin-bottom: 1rem;
 }
 
-.summary-section strong {
-  font-weight: 500;
-}
-
 .cancel-info {
-  font-size: 0.875rem;
-  color: #6c7380;
-  margin-top: auto;
+  color: #b91c1c;
+  font-weight: 600;
 }
 
-.cancel-info strong {
-  color: #1a202c;
-}
-
-@media (max-width: 768px) {
+/* Responsive */
+@media (max-width: 900px) {
   .container {
     flex-direction: column;
+    padding: 2rem;
   }
 
+  .checkout-section,
   .summary-section {
-    border-left: none;
-    border-top: 1px solid #e2e8f0;
-    order: -1;
+    width: 100%;
   }
 }
