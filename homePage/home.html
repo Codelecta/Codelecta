@@ -151,7 +151,7 @@
           >
             <div class="course-card">
               <img
-                src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"
+                src="https://cdn.wallpapersafari.com/98/9/lvH8Qg.png"
                 alt="Course 4"
               />
               <div class="course-content">
@@ -169,7 +169,7 @@
           >
             <div class="course-card">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png"
+                src="https://datapro.in/uploads/1a73de2b9ea968a014158e1af9839dc0.png"
                 alt="Course 5"
               />
               <div class="course-content">
@@ -187,7 +187,7 @@
           >
             <div class="course-card">
               <img
-                src="https://www.php.net/images/logos/new-php-logo.svg"
+                src="https://www.smartsight.in/wp-content/uploads/2020/11/php.png"
                 alt="Course 6"
               />
               <div class="course-content">
@@ -352,38 +352,5 @@
         behavior: "smooth",
       });
     }
-
-    // Course Filtering
-    const filterButtons = document.querySelectorAll(".badge");
-    const courseCards = document.querySelectorAll(".course-card");
-
-    filterButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const filter = button.getAttribute("data-filter");
-
-        // remove active from all
-        filterButtons.forEach((btn) => btn.classList.remove("active"));
-        // add active to clicked
-        button.classList.add("active");
-
-        // filter courses
-        courseCards.forEach((card) => {
-          const categories = card.getAttribute("data-category").split(" ");
-          if (categories.includes(filter)) {
-            card.style.display = "block";
-          } else {
-            card.style.display = "none";
-          }
-        });
-        courseCards.forEach((card) => {
-          const categories = card.getAttribute("data-category").split(" ");
-          if (filter === "all" || categories.includes(filter)) {
-            card.style.display = "block";
-          } else {
-            card.style.display = "none";
-          }
-        });
-      });
-    });
   </script>
 </html>
