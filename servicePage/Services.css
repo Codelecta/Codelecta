@@ -13,6 +13,156 @@ body {
   min-height: 100vh;
 }
 
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: rgba(20, 0, 40, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid #9b30ff;
+  backdrop-filter: blur(5px);
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+nav #logo-container img {
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  object-fit: cover;
+}
+
+nav #logo-container img:hover {
+  transform: scale(1.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: right;
+  align-items: center;
+  transition: left 0.3s ease;
+}
+
+.left-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.right-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav ul li a.signup {
+  background: transparent;
+  color: #9b30ff;
+  border: 2px solid #9b30ff;
+  border-radius: 8px;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav ul li a.signup:hover {
+  background: #9b30ff;
+  color: #fff;
+  box-shadow: 0 0 18px #a020f0, 0 0 30px #ba55d3;
+  transform: scale(1.05);
+}
+
+nav ul li a.login {
+  color: #9b30ff;
+}
+
+nav ul li a.login:hover {
+  color: #d580ff;
+  background-color: #6800b316;
+  padding: 5px 15px;
+  border-radius: 8px;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background: #9b30ff;
+  transition: 0.3s;
+}
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+nav ul li a:hover {
+  color: #9b30ff;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background: #555;
+  margin: 5px 10px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  nav ul {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(20, 0, 40, 0.95);
+  }
+
+  nav ul.show {
+    left: 0;
+  }
+
+  .left-links,
+  .right-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
 /* Title + Description */
 h1 {
   margin-top: 60px;
