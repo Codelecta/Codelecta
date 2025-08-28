@@ -131,7 +131,7 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-/* Responsive */
+/* Responsive Navbar */
 @media (max-width: 900px) {
   nav ul {
     position: absolute;
@@ -140,17 +140,31 @@ nav ul li a:hover {
     width: 100%;
     flex-direction: column;
     background: rgba(20, 0, 40, 0.95);
+    transition: left 0.3s ease-in-out; /* Smooth slide effect */
+    padding: 1rem 0;
+    z-index: 999;
   }
 
   nav ul.show {
     left: 0;
   }
 
-  .left-links,
-  .right-links {
+  .nav-links {
     flex-direction: column;
     width: 100%;
     text-align: center;
+    gap: 1rem; /* Better spacing between links */
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 0.8rem 0;
+    font-size: 1.1rem;
+    transition: background 0.2s ease;
+  }
+
+  .nav-links li a:hover {
+    background: rgba(255, 255, 255, 0.1);
   }
 
   .divider {
@@ -159,6 +173,8 @@ nav ul li a:hover {
 
   .menu-toggle {
     display: block;
+    cursor: pointer;
+    z-index: 1000;
   }
 }
 
