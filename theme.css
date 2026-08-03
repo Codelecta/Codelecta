@@ -1,0 +1,446 @@
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-left: 12px;
+  border: 1px solid rgba(155, 48, 255, 0.65);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  box-shadow: none;
+  transition: background 0.25s ease, border-color 0.25s ease,
+    color 0.25s ease, transform 0.25s ease;
+}
+
+.theme-toggle:hover {
+  background: #9b30ff;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid rgba(155, 48, 255, 0.35);
+  outline-offset: 3px;
+}
+
+.floating-theme-toggle {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 1000;
+  margin-left: 0;
+  background: #21102f;
+}
+
+@media (max-width: 900px) {
+  nav .theme-toggle {
+    margin: 12px auto 0;
+  }
+}
+
+html[data-theme="light"] {
+  --page-bg: #f2eefb;
+  --page-bg-soft: #ebe6f7;
+  --surface: #fffaf6;
+  --surface-muted: #f6f0ff;
+  --text: #20162f;
+  --text-muted: #675b74;
+  --text-soft: #81758c;
+  --accent: #7c2dff;
+  --accent-dark: #571bb3;
+  --accent-soft: #eadfff;
+  --border: #d8cce8;
+  --shadow: 0 12px 28px rgba(64, 42, 95, 0.12);
+  --shadow-hover: 0 18px 36px rgba(124, 45, 255, 0.2);
+  background: var(--page-bg);
+}
+
+html[data-theme="light"] body {
+  background:
+    radial-gradient(circle at top left, rgba(255, 174, 105, 0.2), transparent 34rem),
+    radial-gradient(circle at top right, rgba(124, 45, 255, 0.16), transparent 30rem),
+    linear-gradient(135deg, #fff7ef 0%, var(--page-bg) 58%, #edf4ff 100%) !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="light"] body,
+html[data-theme="light"] p,
+html[data-theme="light"] label,
+html[data-theme="light"] .content,
+html[data-theme="light"] .content p,
+html[data-theme="light"] .passes,
+html[data-theme="light"] .features,
+html[data-theme="light"] .section-description,
+html[data-theme="light"] .desc,
+html[data-theme="light"] .terms-text,
+html[data-theme="light"] .register-link,
+html[data-theme="light"] .forgot-password a,
+html[data-theme="light"] .pass-ent,
+html[data-theme="light"] .char-counter,
+html[data-theme="light"] .copyright,
+html[data-theme="light"] .footer-bottom-links a {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="light"] h1,
+html[data-theme="light"] h2,
+html[data-theme="light"] h3,
+html[data-theme="light"] .title,
+html[data-theme="light"] .section-title,
+html[data-theme="light"] .container-2 h2,
+html[data-theme="light"] .mission .content h2,
+html[data-theme="light"] .values h2,
+html[data-theme="light"] .team h2,
+html[data-theme="light"] .compiler-header h2,
+html[data-theme="light"] .summary-section h2,
+html[data-theme="light"] .card-details-header h3,
+html[data-theme="light"] header h1,
+html[data-theme="light"] .location-details h3,
+html[data-theme="light"] .form-container h3,
+html[data-theme="light"] .team-card h3,
+html[data-theme="light"] .course-content h3 {
+  color: var(--text) !important;
+  text-shadow: none !important;
+}
+
+html[data-theme="light"] nav,
+html[data-theme="light"] .top {
+  background: rgba(255, 250, 246, 0.92) !important;
+  border-bottom: 1px solid var(--border) !important;
+  box-shadow: 0 8px 24px rgba(31, 41, 55, 0.08);
+}
+
+html[data-theme="light"] nav ul li a,
+html[data-theme="light"] .top a {
+  color: var(--text) !important;
+}
+
+html[data-theme="light"] nav ul li a:hover,
+html[data-theme="light"] nav ul li a.active,
+html[data-theme="light"] nav ul li a.login,
+html[data-theme="light"] .top a:hover,
+html[data-theme="light"] .register-link a,
+html[data-theme="light"] .reviews-link {
+  color: var(--accent) !important;
+}
+
+html[data-theme="light"] nav ul li a.signup,
+html[data-theme="light"] .contact-btn,
+html[data-theme="light"] button:not(.theme-toggle),
+html[data-theme="light"] #clear-btn {
+  background: #fff !important;
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="light"] nav ul li a.signup:hover,
+html[data-theme="light"] .contact-btn:hover,
+html[data-theme="light"] button:not(.theme-toggle):hover,
+html[data-theme="light"] #clear-btn:hover,
+html[data-theme="light"] .top a:hover {
+  background: var(--accent) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 18px rgba(124, 58, 237, 0.22) !important;
+}
+
+html[data-theme="light"] .theme-toggle {
+  background: #fff7ef;
+  color: var(--accent);
+  border-color: var(--border);
+}
+
+html[data-theme="light"] .theme-toggle:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+html[data-theme="light"] .menu-toggle {
+  color: var(--text) !important;
+}
+
+html[data-theme="light"] .divider,
+html[data-theme="light"] .seperator-line,
+html[data-theme="light"] .divider-line,
+html[data-theme="light"] .footer-bottom,
+html[data-theme="light"] .address,
+html[data-theme="light"] .form-container h3 {
+  border-color: var(--border) !important;
+}
+
+html[data-theme="light"] .divider,
+html[data-theme="light"] .seperator-line,
+html[data-theme="light"] .divider-line {
+  background: var(--border) !important;
+}
+
+@media (max-width: 900px) {
+html[data-theme="light"] nav ul {
+    background: rgba(255, 250, 246, 0.98) !important;
+    box-shadow: 0 18px 30px rgba(31, 41, 55, 0.1);
+  }
+
+  html[data-theme="light"] .nav-links li a:hover {
+    background: var(--accent-soft) !important;
+  }
+}
+
+html[data-theme="light"] .notification-bar {
+  background: #f4eaff !important;
+  color: var(--text) !important;
+  border-bottom: 1px solid #ddd6fe;
+}
+
+html[data-theme="light"] .notification-bar a,
+html[data-theme="light"] .close-btn {
+  color: var(--accent) !important;
+}
+
+html[data-theme="light"] .close-btn:hover {
+  background: #e4dcff !important;
+  color: var(--accent-dark) !important;
+}
+
+html[data-theme="light"] .container-1 {
+  background-image: linear-gradient(rgba(255, 246, 235, 0.72), rgba(242, 238, 251, 0.84)),
+    url("homePage/Bg.png") !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="light"] .container-1 p,
+html[data-theme="light"] .intro p {
+  color: var(--text-muted) !important;
+  text-shadow: none !important;
+}
+
+html[data-theme="light"] .container-2,
+html[data-theme="light"] #container-3,
+html[data-theme="light"] .cta,
+html[data-theme="light"] .mission,
+html[data-theme="light"] .values,
+html[data-theme="light"] .team,
+html[data-theme="light"] main,
+html[data-theme="light"] section {
+  background-color: transparent !important;
+}
+
+html[data-theme="light"] .intro {
+  background: linear-gradient(135deg, #efe4ff, #fff7ef 48%, #e8f2ff) !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="light"] .cta {
+  border-top: 1px solid var(--border) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+html[data-theme="light"] .btn,
+html[data-theme="light"] .neon-btn,
+html[data-theme="light"] .form-button,
+html[data-theme="light"] .submit-btn,
+html[data-theme="light"] .submit-button,
+html[data-theme="light"] #run-btn,
+html[data-theme="light"] .button,
+html[data-theme="light"] .toolbar button,
+html[data-theme="light"] .login-box button,
+html[data-theme="light"] .signup-box button,
+html[data-theme="light"] .forgotpass-box button {
+  background: linear-gradient(135deg, var(--accent), #9f5cf5) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 8px 18px rgba(124, 58, 237, 0.22) !important;
+}
+
+html[data-theme="light"] .btn:hover,
+html[data-theme="light"] .neon-btn:hover,
+html[data-theme="light"] .form-button:hover,
+html[data-theme="light"] .submit-btn:hover,
+html[data-theme="light"] .submit-button:hover,
+html[data-theme="light"] #run-btn:hover:not(:disabled),
+html[data-theme="light"] .button:hover,
+html[data-theme="light"] .toolbar button:hover,
+html[data-theme="light"] .login-box button:hover,
+html[data-theme="light"] .signup-box button:hover,
+html[data-theme="light"] .forgotpass-box button:hover {
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent)) !important;
+  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.28) !important;
+}
+
+html[data-theme="light"] .badge,
+html[data-theme="light"] .trial-badge {
+  background: var(--accent) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.2) !important;
+  border: none !important;
+}
+
+html[data-theme="light"] .badge.active {
+  background: #db2777 !important;
+}
+
+html[data-theme="light"] .container-2,
+html[data-theme="light"] .course-card,
+html[data-theme="light"] .value-cards .card,
+html[data-theme="light"] .team-card,
+html[data-theme="light"] .form-container,
+html[data-theme="light"] .map-container,
+html[data-theme="light"] #container,
+html[data-theme="light"] .login-box,
+html[data-theme="light"] .signup-box,
+html[data-theme="light"] .forgotpass-box,
+html[data-theme="light"] .checkout-section,
+html[data-theme="light"] .summary-section,
+html[data-theme="light"] #free,
+html[data-theme="light"] #plus,
+html[data-theme="light"] #pro,
+html[data-theme="light"] .compiler,
+html[data-theme="light"] .editor-box,
+html[data-theme="light"] .console {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+html[data-theme="light"] .container-2:hover,
+html[data-theme="light"] .course-card:hover,
+html[data-theme="light"] .value-cards .card:hover,
+html[data-theme="light"] .team-card:hover,
+html[data-theme="light"] .form-container:hover,
+html[data-theme="light"] .map-container:hover,
+html[data-theme="light"] #free:hover,
+html[data-theme="light"] #plus:hover,
+html[data-theme="light"] #pro:hover,
+html[data-theme="light"] .compiler:hover,
+html[data-theme="light"] .editor-box:hover {
+  box-shadow: var(--shadow-hover) !important;
+}
+
+html[data-theme="light"] .course-content .provider,
+html[data-theme="light"] .value-cards .card i,
+html[data-theme="light"] .location-icon,
+html[data-theme="light"] .footer-section ul li a:hover,
+html[data-theme="light"] .footer-bottom-links a:hover,
+html[data-theme="light"] .footer-section h3,
+html[data-theme="light"] .contact-info strong,
+html[data-theme="light"] .compiler-header h2,
+html[data-theme="light"] .console-header,
+html[data-theme="light"] .status,
+html[data-theme="light"] .plan h3,
+html[data-theme="light"] b {
+  color: var(--accent) !important;
+  text-shadow: none !important;
+}
+
+html[data-theme="light"] .course-content .type,
+html[data-theme="light"] .team p,
+html[data-theme="light"] .team-card p,
+html[data-theme="light"] .value-cards .card p,
+html[data-theme="light"] .contact-info p,
+html[data-theme="light"] .logo-subtitle,
+html[data-theme="light"] .footer-section ul li a,
+html[data-theme="light"] .footer-bottom-links a,
+html[data-theme="light"] .copyright,
+html[data-theme="light"] .seperator-text,
+html[data-theme="light"] .divider-text,
+html[data-theme="light"] header p,
+html[data-theme="light"] .summary-section p {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="light"] input,
+html[data-theme="light"] select,
+html[data-theme="light"] textarea,
+html[data-theme="light"] .form-input,
+html[data-theme="light"] #codeArea,
+html[data-theme="light"] #py-code,
+html[data-theme="light"] #react-code,
+html[data-theme="light"] #java-code,
+html[data-theme="light"] #c-code,
+html[data-theme="light"] #php-code {
+  background-color: #fffdf9 !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="light"] input:focus,
+html[data-theme="light"] select:focus,
+html[data-theme="light"] textarea:focus,
+html[data-theme="light"] .form-input:focus,
+html[data-theme="light"] #codeArea:focus,
+html[data-theme="light"] #py-code:focus,
+html[data-theme="light"] #react-code:focus,
+html[data-theme="light"] #java-code:focus,
+html[data-theme="light"] #c-code:focus,
+html[data-theme="light"] #php-code:focus {
+  background-color: #fffdf9 !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.14) !important;
+  outline: none !important;
+}
+
+html[data-theme="light"] select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23172033' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+}
+
+html[data-theme="light"] .toolbar,
+html[data-theme="light"] .console-header,
+html[data-theme="light"] .status,
+html[data-theme="light"] iframe,
+html[data-theme="light"] #preview,
+html[data-theme="light"] #py-output,
+html[data-theme="light"] #react-output,
+html[data-theme="light"] #java-output,
+html[data-theme="light"] #c-output,
+html[data-theme="light"] #php-output {
+  background: var(--surface-muted) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="light"] #react-output #output,
+html[data-theme="light"] #react-output #output h1,
+html[data-theme="light"] #react-output #output h2,
+html[data-theme="light"] #react-output #output h3,
+html[data-theme="light"] #react-output #output input {
+  color: var(--text) !important;
+}
+
+html[data-theme="light"] .social-btn {
+  background: var(--surface-muted) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+}
+
+html[data-theme="light"] .footer {
+  background: #fffaf6 !important;
+  color: var(--text) !important;
+  border-top: 1px solid var(--border) !important;
+  box-shadow: 0 -8px 24px rgba(31, 41, 55, 0.06);
+}
+
+html[data-theme="light"] .social-links a {
+  background: var(--accent-soft) !important;
+  color: var(--accent) !important;
+}
+
+html[data-theme="light"] .social-links a:hover,
+html[data-theme="light"] #topBtn {
+  background: var(--accent) !important;
+  color: #fff !important;
+}
+
+html[data-theme="light"] .success-message {
+  background: #ecfdf5 !important;
+  color: #047857 !important;
+}
+
+html[data-theme="light"] .cancel-info,
+html[data-theme="light"] .required {
+  color: #dc2626 !important;
+}

@@ -305,7 +305,9 @@ nav ul li a:hover {
 /* Container 2 */
 .container-2 {
   background-color: #1a001f;
-  margin: 40px 60px;
+  width: calc(100% - 120px);
+  max-width: 1100px;
+  margin: 40px auto;
   border-radius: 16px;
   padding: 60px 30px;
   text-align: center;
@@ -315,6 +317,7 @@ nav ul li a:hover {
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeIn 0.6s ease-in-out;
+  box-sizing: border-box;
 }
 
 .container-2 h2 {
